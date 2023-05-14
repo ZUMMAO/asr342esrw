@@ -1,0 +1,507 @@
+package p043br.com.santander.sdd;
+
+import android.os.Build;
+
+/* renamed from: br.com.santander.sdd.ππλλππλ  reason: contains not printable characters */
+public class C37043 implements C37091 {
+
+    /* renamed from: К041A041AК041A041A041A  reason: contains not printable characters */
+    public static int f91900041A041A041A041A041A = 2;
+
+    /* renamed from: К041AКК041A041A041A  reason: contains not printable characters */
+    public static int f91901041A041A041A041A = 0;
+
+    /* renamed from: КК041AК041A041A041A  reason: contains not printable characters */
+    public static int f91902041A041A041A041A = 1;
+
+    /* renamed from: КККК041A041A041A  reason: contains not printable characters */
+    public static int f91903041A041A041A = 51;
+
+    /* renamed from: я044F044F044F044Fя044F  reason: contains not printable characters */
+    private static String f91904044F044F044F044F044F = "P";
+
+    /* renamed from: я044F044F044Fя044F044F  reason: contains not printable characters */
+    private static final String f91905044F044F044F044F044F = "MIIEPjCCAyagAwIBAgIESlOMKDANBgkqhkiG9w0BAQsFADCBvjELMAkGA1UEBhMC\nVVMxFjAUBgNVBAoTDUVudHJ1c3QsIEluYy4xKDAmBgNVBAsTH1NlZSB3d3cuZW50\ncnVzdC5uZXQvbGVnYWwtdGVybXMxOTA3BgNVBAsTMChjKSAyMDA5IEVudHJ1c3Qs\nIEluYy4gLSBmb3IgYXV0aG9yaXplZCB1c2Ugb25seTEyMDAGA1UEAxMpRW50cnVz\ndCBSb290IENlcnRpZmljYXRpb24gQXV0aG9yaXR5IC0gRzIwHhcNMDkwNzA3MTcy\nNTU0WhcNMzAxMjA3MTc1NTU0WjCBvjELMAkGA1UEBhMCVVMxFjAUBgNVBAoTDUVu\ndHJ1c3QsIEluYy4xKDAmBgNVBAsTH1NlZSB3d3cuZW50cnVzdC5uZXQvbGVnYWwt\ndGVybXMxOTA3BgNVBAsTMChjKSAyMDA5IEVudHJ1c3QsIEluYy4gLSBmb3IgYXV0\naG9yaXplZCB1c2Ugb25seTEyMDAGA1UEAxMpRW50cnVzdCBSb290IENlcnRpZmlj\nYXRpb24gQXV0aG9yaXR5IC0gRzIwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEK\nAoIBAQC6hLZy254Ma+KZ6TABp3bqMriVQRrJ2mFOWHLP/vaCeb9zYQYKpSfYs1/T\nRU4cctZOMvJyig/3gxnQaoCAAEUesMfnmr8SVycco2gvCoe9amsOXmXzHHfV1IWN\ncCG0szLni6LVhjkCsbjSR87kyUnEO6fe+1R9V77w6G7CebI6C1XiUJgWMhNcL3hW\nwcKUs/Ja5CeanyTXxuzQmyWC48zCxEXFjJd6BmsqEZ+pCm5IO2/b1BEZQvePB7/1\nU1+cPvQXLOZprE4yTGJ36rfo5bs0vBmLrpxR57d+tVOxMyLlbc9wPBr64ptntoP0\njaWvYkxN4FisZDQSA/i2jZRjJKRxAgMBAAGjQjBAMA4GA1UdDwEB/wQEAwIBBjAP\nBgNVHRMBAf8EBTADAQH/MB0GA1UdDgQWBBRqciZ60B7vfec7aVHUbI2fkBJmqzAN\nBgkqhkiG9w0BAQsFAAOCAQEAeZ8dlsa2eT8ijYfThwMEYGprmi5ZiXMRrEPR9RP/\njTkrwPK9T3CMqS/qF8QLVJ7UG5aYMzyorWKiAHarWWluBh1+xLlEjZivEtRh2woZ\nRkfz6/djwUAFQKXSt/S1mja/qYh2iARVBCuch38aNzx+LaUa2NSJXsq9rD1s2G2v\n1fN2D807iDginWyTmsQ9v4IbZT+mD12q/OWyFcq1rca8PdCE6OoGcrBNOTJ4vz4R\nnAuknZoh8/CbCzB428Hch0P+vGOaysXCHMnHjf87ElgI5rY97HosTvuDls4MPGmH\nVHOkc8KT/1EQrBVUAdj8BbGJoX90g5pJ19xOe4pIb4tF9g==";
+
+    /* renamed from: я044F044Fяя044F044F  reason: contains not printable characters */
+    private static final String f91906044F044F044F044F = "MIIDHzCCAgcCFA4p/ZE3HzDm5w0MSLINGsA1VB5IMA0GCSqGSIb3DQEBCwUAMFIx\nCzAJBgNVBAYTAlVTMQswCQYDVQQIDAJJTDEWMBQGA1UECgwNUmFuY2hlciwgSW5j\nLjEeMBwGA1UEAwwVcmFuY2hlci5zdXBwb3J0LnRvb2xzMB4XDTIyMDgyMjE3NTMy\nNloXDTIyMDgyMzE3NTMyNlowRjELMAkGA1UEBhMCVVMxCzAJBgNVBAgMAklMMRYw\nFAYDVQQKDA1SYW5jaGVyLCBJbmMuMRIwEAYDVQQDDAkxMC40My4wLjEwggEiMA0G\nCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCswNz5IO5E1mnV6T8BAhODtxL4Gert\nOKhT/GHOuo30AgLHPupGll0rrw0oh+UBsSWoZcW8LIpyE8yAtT4CZ3PBBNGzupsS\nTF1fyM7fkkOvKGW5858IIN2NkH4Z3ANECYwolcJVsgkSGH0hPIb9sypjcV+ipvxL\n3E6P6QNmVv0hYktxfMe7znBGA/aDGjaynYd4FsinVOFVBzqrgBXON+yBcwTuUWrc\negxcMvMHMw8Ra/n0FszEcZtr7e3QwtZaauueawlpVSBuwdw95LMgp2awSa2gvEGH\nv65b0h1A/PCgtvDd5hk3cPCYR7h4ljzzxeLgHJAG2uNuoy2pLPct8PXXAgMBAAEw\nDQYJKoZIhvcNAQELBQADggEBAJpxDJebOEi+JFZTQ0ABeUdt5ApzHynClbUuXZ9S\nbTe5kFepyzG8NPScWb42htOKHwdpLLpE7z4DAIBuVA+gZS5NTNB9h2BTaNDhbyqP\n40DpVBsNtyIe6dTY11VeYRW3rHqD+5kM3O//qOd0YrpXPzygUEq+mmP2lfac2JOZ\nJvXCx2NYAL4F70BzQ53hqp1wKJgu+JE7fg3YmujwuhTUJ5TxWLOIrnoamxMvE86y\nGnb4yfSAbKMdoobmZNiNYNO2zUApWIURPTzx/iQxuM8HbQbB22BRH5sEK+ebg3gw\nlOTilONJWUY3FAdkjgDHzOgDkeU6UruEboX+tnaQzrTHO78=";
+
+    /* renamed from: я044Fя044F044Fя044F  reason: contains not printable characters */
+    private static String f91907044F044F044F044F = null;
+
+    /* renamed from: я044Fя044Fя044F044F  reason: contains not printable characters */
+    private static final String f91908044F044F044F044F = "MIIGBDCCBOygAwIBAgITMgAAFMWEXKe0vQjuKAAAAAAUxTANBgkqhkiG9w0BAQsF\nADBoMRQwEgYKCZImiZPyLGQBGRYEY29ycDEaMBgGCgmSJomT8ixkARkWCnByb2R1\nYmFuYnIxFTATBgoJkiaJk/IsZAEZFgVwcmJicjEdMBsGA1UEAxMUQ0EtSW50ZXJu\nYS1TYW50YW5kZXIwHhcNMjAwNTEzMTUwNDEwWhcNMjMwNTEzMTUxNDEwWjCBgjEL\nMAkGA1UEBhMCQlIxEjAQBgNVBAgTCVNhbyBQYXVsbzESMBAGA1UEBxMJU2FvIFBh\ndWxvMRgwFgYDVQQKEw9HUlVQTyBTQU5UQU5ERVIxDzANBgNVBAsTBkJSQVNJTDEg\nMB4GA1UEAxQXKi5wYWFzLmlzYmFuYnIuZGV2LmNvcnAwggEiMA0GCSqGSIb3DQEB\nAQUAA4IBDwAwggEKAoIBAQC+ImzUJugPzz/Ts9cvezb9tebbPuS2f5GDt0XGnoCr\n9/cpEqOdwBla7pzemRF0XBkj92Q41ylIqsMohwIhaYICtF841BpQLfX5ymewWay0\n1UBiMEqLl47cFDHRDXxsAsoGYvBAig90ulfd3tbHTevyFz0h/1xmoCrxiGdkR33T\nkk8xgqqmphRsSXmQBl7yfdH+tbYZy+qdowDOKzs2bmc5uG7mUdecvzuSltihdEOE\n8LU/qmP/EuqQr224AQUnKe9EbTbDRTCO7bj/L2r6Xg82B4ET4KKgiWplwpo2oR4b\nkGtRVgfHaku0GFNOMpqxEBOcnC7e7Iuuaxf/eD6AACn3AgMBAAGjggKKMIIChjAi\nBgNVHREEGzAZghcqLnBhYXMuaXNiYW5ici5kZXYuY29ycDAdBgNVHQ4EFgQUF0Li\ndVc47QLG1qxXZFBKAUl5Cm8wHwYDVR0jBBgwFoAUwVAcLy3lG00nihJ5XsG+ndfo\n184wggE6BgNVHR8EggExMIIBLTCCASmgggEloIIBIYaBzmxkYXA6Ly8vQ049Q0Et\nSW50ZXJuYS1TYW50YW5kZXIsQ049c3J2bWJzcHZ3YnIyMSxDTj1DRFAsQ049UHVi\nbGljJTIwS2V5JTIwU2VydmljZXMsQ049U2VydmljZXMsQ049Q29uZmlndXJhdGlv\nbixEQz1wcmJicixEQz1wcm9kdWJhbmJyLERDPWNvcnA/Y2VydGlmaWNhdGVSZXZv\nY2F0aW9uTGlzdD9iYXNlP29iamVjdENsYXNzPWNSTERpc3RyaWJ1dGlvblBvaW50\nhk5odHRwOi8vc3J2bWJzcHZ3YnIyMS5wcmJici5wcm9kdWJhbmJyLmNvcnAvQ2Vy\ndEVucm9sbC9DQS1JbnRlcm5hLVNhbnRhbmRlci5jcmwwgdMGCCsGAQUFBwEBBIHG\nMIHDMIHABggrBgEFBQcwAoaBs2xkYXA6Ly8vQ049Q0EtSW50ZXJuYS1TYW50YW5k\nZXIsQ049QUlBLENOPVB1YmxpYyUyMEtleSUyMFNlcnZpY2VzLENOPVNlcnZpY2Vz\nLENOPUNvbmZpZ3VyYXRpb24sREM9cHJiYnIsREM9cHJvZHViYW5icixEQz1jb3Jw\nP2NBQ2VydGlmaWNhdGU/YmFzZT9vYmplY3RDbGFzcz1jZXJ0aWZpY2F0aW9uQXV0\naG9yaXR5MAwGA1UdEwEB/wQCMAAwDQYJKoZIhvcNAQELBQADggEBADM4Zx8GVKtg\nHYS3KY0fOUBZByIs1u1CpS5YKj09Xb4EVjW0/USAvPEFcXRa2UvnpY4OfLF72zj4\nsMeBfhQySzMIUrOVzPnGZpYsqurxCUL79+aq3PeQcB0sl97rgq0Wv+IU42DBhbXb\nJjRHK4GwyZO2gII0CRQPeujVMZr+HOJDe9bRdzdPKlQG9FP6ttkKJ4DKvAPN0wPk\nWiFxB4f1VsrwBrIUYqCmVvTn83jQBws6pkvPPZjiy5G9hSTMfsem/vIbgcjySWEj\n0ciRCC6jF1Oj8AnQi2LMXbQIXF7RM5eYqcUUBbwCweAPYcN1KZo9Y04hAUZHy/HO\neO6rfYV1qu0=";
+
+    /* renamed from: я044Fяя044F044F044F  reason: contains not printable characters */
+    private static final String f91909044F044F044F044F = "MIIG0DCCBbigAwIBAgIQeFfg7o6LkXqIM25nftDzcDANBgkqhkiG9w0BAQsFADCB\nujELMAkGA1UEBhMCVVMxFjAUBgNVBAoTDUVudHJ1c3QsIEluYy4xKDAmBgNVBAsT\nH1NlZSB3d3cuZW50cnVzdC5uZXQvbGVnYWwtdGVybXMxOTA3BgNVBAsTMChjKSAy\nMDEyIEVudHJ1c3QsIEluYy4gLSBmb3IgYXV0aG9yaXplZCB1c2Ugb25seTEuMCwG\nA1UEAxMlRW50cnVzdCBDZXJ0aWZpY2F0aW9uIEF1dGhvcml0eSAtIEwxSzAeFw0y\nMTExMTkxMzUxMTdaFw0yMjExMTkxMzUxMTdaMIGBMQswCQYDVQQGEwJFUzESMBAG\nA1UECBMJQ2FudGFicmlhMRIwEAYDVQQHEwlTYW50YW5kZXIxGDAWBgNVBAoTD0dS\nVVBPIFNBTlRBTkRFUjEPMA0GA1UECxMGQlJBU0lMMR8wHQYDVQQDExZzZGRoaS5z\nYW50YW5kZXIuY29tLmJyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA\nkguHpP1zgajMDx55H+c/QmfJn7UDpk+Z1X6V3LCzrUQ55DKzCbUAGar6OG7Nodca\nexBotHfgca+lrvWaHkfUYTWse+qTCyUAf0cSBdhwTOF2iX6Wexa6yUKog4oAbOeD\nVCRXX3tgE3IS9rwDeAy5qpS/B8CVCfI6pV37h6D1B/mCur3kjFX0aIWnvuAmkUXy\nTn4bh8z4IfmM9Ch9XWzLDBJ0bNZ0IacBsTqhN9E6T4UpeHM/RG19sP4FuUcRxS6R\ncSuuWVPnTgf24Zm/Ae/Ayq3O3bt/3Pg4AxGzljIEastq+JNWRra4xtgrdM62i875\nYtnAZr7BDVcu9OAX0+2CQwIDAQABo4IDBzCCAwMwDAYDVR0TAQH/BAIwADAdBgNV\nHQ4EFgQUqzxynQ4F+6MaA/YoCYB2WHy0a58wHwYDVR0jBBgwFoAUgqJwdN28Uz/P\ne9T3zX+nYMYKTL8waAYIKwYBBQUHAQEEXDBaMCMGCCsGAQUFBzABhhdodHRwOi8v\nb2NzcC5lbnRydXN0Lm5ldDAzBggrBgEFBQcwAoYnaHR0cDovL2FpYS5lbnRydXN0\nLm5ldC9sMWstY2hhaW4yNTYuY2VyMDMGA1UdHwQsMCowKKAmoCSGImh0dHA6Ly9j\ncmwuZW50cnVzdC5uZXQvbGV2ZWwxay5jcmwwIQYDVR0RBBowGIIWc2RkaGkuc2Fu\ndGFuZGVyLmNvbS5icjAOBgNVHQ8BAf8EBAMCBaAwEwYDVR0lBAwwCgYIKwYBBQUH\nAwEwTAYDVR0gBEUwQzA3BgpghkgBhvpsCgEFMCkwJwYIKwYBBQUHAgEWG2h0dHBz\nOi8vd3d3LmVudHJ1c3QubmV0L3JwYTAIBgZngQwBAgIwggF8BgorBgEEAdZ5AgQC\nBIIBbASCAWgBZgB1AFYUBpov18Ls0/XhvUSyPsdGdrm8mRFcwO+UmFXWidDdAAAB\nfTh3PosAAAQDAEYwRAIgJqSc64b1ivMCUGTsUxqetYAwQq4zq8DBp98qeL7bOsQC\nIAn6N/kFT+wvDcNEe4VqlXvU4oUrYCMj8akiO2n6tt/hAHYA36Veq2iCTx9sre64\nX04+WurNohKkal6OOxLAIERcKnMAAAF9OHc+fAAABAMARzBFAiEA4Mktr2Wzqqvp\niK3BbLMLKylVfdce7gXlUnHLpS/E0kACIGqtpbYjpU+MqBiyVy2IfawvhCHyN0X4\nj1TeFBCG0smOAHUARqVV63X6kSAwtaKJafTzfREsQXS+/Um4havy/HD+bUcAAAF9\nOHc+swAABAMARjBEAiBSJriHSQ5OC7SHBDYXdI6yYNemSFraFGM+zyixJHso+QIg\nOUP3GhdSNkCdw+DpRWArL70eCy3AeYOrfU7vmrllnp4wDQYJKoZIhvcNAQELBQAD\nggEBAHHU2oc/h5lp5s7c7nQJFMtegF+eGKUklUSSAH0tuUCLb6RlH32aVHhwwrk+\nwQdBN4Gu20oLIaiVkjx3CkKM1hYPzwF5cGCxEBzm2UoGRerBlh6kqKZl4w+tZHV0\nNM0SpLHYAvLTaCIH9ucrwbCtf04mlcPU3/Dd7jR/6osCG3IDOy3hVDvVD3nyxtH5\nvZ893+iaYJsHsMoy07F4VL32CJ7zfoHpCKRbCVOSH+iABauIOeXnt7Ms2nsAcLtt\nbs68VlxQEQSGrgoIndS0dQH0qedWjHrXdPylFb0W6GYrEGBqIbI2SFpu/bMXZ/VN\nHN75CuhXgt8JL6Jxcjdblw7r+Yo=";
+
+    /* renamed from: яя044F044F044Fя044F  reason: contains not printable characters */
+    private static String f91910044F044F044F044F = null;
+
+    /* renamed from: яя044F044Fя044F044F  reason: contains not printable characters */
+    private static final String f91911044F044F044F044F = "MIIGDDCCBPSgAwIBAgITMgAAFLUScDhGg/lLWwAAAAAUtTANBgkqhkiG9w0BAQsF\nADBoMRQwEgYKCZImiZPyLGQBGRYEY29ycDEaMBgGCgmSJomT8ixkARkWCnByb2R1\nYmFuYnIxFTATBgoJkiaJk/IsZAEZFgVwcmJicjEdMBsGA1UEAxMUQ0EtSW50ZXJu\nYS1TYW50YW5kZXIwHhcNMjAwNTExMTgxMDQxWhcNMjMwNTExMTgyMDQxWjCBhjEL\nMAkGA1UEBhMCQlIxEjAQBgNVBAgTCVNhbyBQYXVsbzESMBAGA1UEBxMJU2FvIFBh\ndWxvMRgwFgYDVQQKEw9HUlVQTyBTQU5UQU5ERVIxDzANBgNVBAsTBkJSQVNJTDEk\nMCIGA1UEAxQbKi5wYWFzLnNhbnRhbmRlcmJyLnByZS5jb3JwMIIBIjANBgkqhkiG\n9w0BAQEFAAOCAQ8AMIIBCgKCAQEAr2RuxbRT8q34lOwpsc4Sp9zMJQik5XSxoAxG\ngsKKfXN4N0ccr/PCL3XuRoGrP19PJn+VCJYvogQq5SQPhllnaoJ8lLkhb7r8/X7S\njl7/OV890+17tXA4TCIUAQjCOvHGLaa8h8snmiHshAJeR1p+58GgHSDG1Dhir9UV\ncGx3nj2eiNwclg7uty8AteqiUx6jRfu3zL3IQtkKTYjPWE82q5nhaW0m5Mfj2bp6\n7Rr5Ejh/JiO4W7VTHDfJQOnPWvFvrSKL3rI1+QwaT05mGmWqUB12HqgHfgwZ/HQc\nbDunxal/cW0lxF+G3vdwvRidLKQ5/AuN9tJwff4mOczfQDsK4wIDAQABo4ICjjCC\nAoowJgYDVR0RBB8wHYIbKi5wYWFzLnNhbnRhbmRlcmJyLnByZS5jb3JwMB0GA1Ud\nDgQWBBQYWRGUei+nEjvJ9ptuR4wInG7UIDAfBgNVHSMEGDAWgBTBUBwvLeUbTSeK\nEnlewb6d1+jXzjCCAToGA1UdHwSCATEwggEtMIIBKaCCASWgggEhhoHObGRhcDov\nLy9DTj1DQS1JbnRlcm5hLVNhbnRhbmRlcixDTj1zcnZtYnNwdndicjIxLENOPUNE\nUCxDTj1QdWJsaWMlMjBLZXklMjBTZXJ2aWNlcyxDTj1TZXJ2aWNlcyxDTj1Db25m\naWd1cmF0aW9uLERDPXByYmJyLERDPXByb2R1YmFuYnIsREM9Y29ycD9jZXJ0aWZp\nY2F0ZVJldm9jYXRpb25MaXN0P2Jhc2U/b2JqZWN0Q2xhc3M9Y1JMRGlzdHJpYnV0\naW9uUG9pbnSGTmh0dHA6Ly9zcnZtYnNwdndicjIxLnByYmJyLnByb2R1YmFuYnIu\nY29ycC9DZXJ0RW5yb2xsL0NBLUludGVybmEtU2FudGFuZGVyLmNybDCB0wYIKwYB\nBQUHAQEEgcYwgcMwgcAGCCsGAQUFBzAChoGzbGRhcDovLy9DTj1DQS1JbnRlcm5h\nLVNhbnRhbmRlcixDTj1BSUEsQ049UHVibGljJTIwS2V5JTIwU2VydmljZXMsQ049\nU2VydmljZXMsQ049Q29uZmlndXJhdGlvbixEQz1wcmJicixEQz1wcm9kdWJhbmJy\nLERDPWNvcnA/Y0FDZXJ0aWZpY2F0ZT9iYXNlP29iamVjdENsYXNzPWNlcnRpZmlj\nYXRpb25BdXRob3JpdHkwDAYDVR0TAQH/BAIwADANBgkqhkiG9w0BAQsFAAOCAQEA\nPzG1OYnuymxrvpaoxrDoFhv3EbP5jDCZxO/FJIYXaqWir2lVr2+8kl3SnoK4FlG4\nUg9ojIIp6Bv3UkmhxXxocucnT2W+pgpWqetoDou2HLzsnRIQvad4lJBKnq/4Z9M8\nT76ouGAaupdx8mxUXlOusF1PnvCSa/Or2O5VztYQi/vE6kYD9byZ4g1NrMEN9jNh\nEHhZhVHzfc42yMuglOcY1Uj4ztnD54E/kgyZ9M6gknyW6j7zkeFzLB1eyctu2FNi\nfiBA1MkrfcpbiF1Xsco1hkLz1HhWad1b6mCVnbdvlBvgudG0UC02RCjrftaf3+12\nl6UdKdrZsNwG9j+2Ebqq3A==";
+
+    /* renamed from: яя044Fя044F044F044F  reason: contains not printable characters */
+    private static C37091 f91912044F044F044F044F = null;
+
+    /* renamed from: яяя044Fя044F044F  reason: contains not printable characters */
+    private static final String f91913044F044F044F = "MIIFiDCCA3CgAwIBAgIJAN1Gwz0AaxeKMA0GCSqGSIb3DQEBCwUAMGgxCzAJBgNV\nBAYTAkJSMQswCQYDVQQIDAJWQTEPMA0GA1UEBwwGU29tZUNpMRAwDgYDVQQKDAdN\neUNvbXBhMREwDwYDVQQLDAhNeURpdmlzaTEWMBQGA1UEAwwNMTkyLjE2OC4xNS4x\nMjAeFw0yMjAxMjExNzQwMDBaFw0yMzAxMjExNzQwMDBaMGgxCzAJBgNVBAYTAkJS\nMQswCQYDVQQIDAJWQTEPMA0GA1UEBwwGU29tZUNpMRAwDgYDVQQKDAdNeUNvbXBh\nMREwDwYDVQQLDAhNeURpdmlzaTEWMBQGA1UEAwwNMTkyLjE2OC4xNS4xMjCCAiIw\nDQYJKoZIhvcNAQEBBQADggIPADCCAgoCggIBALT6BkN3KqcIjNqcEQy3et4uCaNV\nY5dI0V6OWy3OV7EHpeZGxMubEFFzcxn2gHX4QewG900M9BBLVfLAIrBXg375a4Nv\n0XshW7DoxXlQ45GqfP/slA41ncoDrC7ywW6ZikS7kkiNrgo5wzcjYjRYbjyy6lma\nrjPP4jvilS58zpEH/q+xQgGsC6e1SD4h7pvJvP/5EomM7URmehU7j3lI27Vq6pPw\nA8LnXP945JcgqqN9t4yRg4BYgZtjGfVIpJ3WHIPq3vHLZMDMyqPglwjK2erT7zTR\niDFM3bMIjh2kCD7WsunUQ9BoULuzkxfiVw9hM41AdE1UZPrTDrcRTvLoSwh4fLOR\nnI+Ezl5kVfEo76y8ntRMUyMJoEbY0ffBeKPcE+L5+foR+tfHRn5PhGpOdNMCQYOR\n39Ngnw/rUPVQoZwqKnwEo3F4rsWWuoGAmVEG483PdiTdnkqvFbQwwgFn8UzOSHJz\nnw5bKQdjy3tGuVn2sgKHnf55oPHasfluADHOLIBhWNnwsxNuBWvA+6Gjy6ieYBEI\nQdYkhj8Evb1pHk8ab5KQh5jxmWFeGvk5pL5TS9xFhYsH8BOXJKH2TYKTuSRCAqes\nYX9YsZRBV+s3LcaKByLx0eJMExibSy+z4IvESP4kv+Grk8Wv4bsd29HMPTAMLBwx\nBzS9RDdV/z7D0/DJAgMBAAGjNTAzMAsGA1UdDwQEAwIF4DATBgNVHSUEDDAKBggr\nBgEFBQcDATAPBgNVHREECDAGhwTAqA8MMA0GCSqGSIb3DQEBCwUAA4ICAQCX6iJ/\nFJwVoHGmhKSDHECX5WXk3vJIYgZYAlmEKKApcgSy9czJVo7FQeL09ofdU+jywZ/M\nfd+ZCulvlEQo+Nz5i1tkS4P5r2Myibdbd/civKkkzXlVwksOa/qH5c9mep0+qPoD\niicNI0o/Lnpzob8Dg/qgQRCmtWb3qp8RAMGAZXPbWkV1+hF40DCk6ICuOVvaseGj\nu0BzA9eiIBMQOj0Td4kk7hJRnY1Uqd6a0WOIw5sXIOLQEZLF7i10/04D00gys3+N\n0sMmtSjSAAIQa7YZH2q2GVHwlGLDXtNhJDA2LfVhFY/RqFDmaZ1vFdCvAuTpIAyZ\nakogEGarNW0T5N2VNoSEqV/9ieAndsnQ/ZayFDsOT3SdidTvaNvC8bgpzkFMjxZQ\nf9GPacSi5B23fotwos67epjr+EdEFKw44XFzpPEGAfuZdifYSvO16QjfVTlLg5ew\n3FSKpjGXhKMgiHLSRRNe240Egbyo/8tvaKC2j38ioA6qpCaXgAecT5WUA+OvdUag\nYlxPoF4VuYUhFIabIXGCSTKDqfPeKlOE90kc4Y545Ifs1xI+cHTI8m/6IRFVaQeF\nSiaZRbYMpLyi+ZjmMBNCtxqftcdKtAiUlReKu9esZGsGEQ8lRTnHU5jn+ZcCBpg3\nVAschdcSNzD7QWitfcPWkw9kK9mkNPukpzdTXw==";
+
+    /* renamed from: яяяя044F044F044F  reason: contains not printable characters */
+    private static final String f91914044F044F044F = "MIIGGTCCBQGgAwIBAgITMgAAGXUmJfgyABbo5wAAAAAZdTANBgkqhkiG9w0BAQsF\nADBoMRQwEgYKCZImiZPyLGQBGRYEY29ycDEaMBgGCgmSJomT8ixkARkWCnByb2R1\nYmFuYnIxFTATBgoJkiaJk/IsZAEZFgVwcmJicjEdMBsGA1UEAxMUQ0EtSW50ZXJu\nYS1TYW50YW5kZXIwHhcNMjEwMjAzMDUyMjE5WhcNMjQwMjAzMDUzMjE5WjCBgTEL\nMAkGA1UEBhMCQlIxEjAQBgNVBAgTCVNBTyBQQVVMTzESMBAGA1UEBxMJU0FPIFBB\nVUxPMRgwFgYDVQQKEw9HUlVQTyBTQU5UQU5ERVIxDzANBgNVBAsTBkJSQVNJTDEf\nMB0GA1UEAwwWKi5ha3Muc2FudGFuZGVyYnIuY29ycDCCASIwDQYJKoZIhvcNAQEB\nBQADggEPADCCAQoCggEBAJ//9FFrecW0B9+8Tna7Dy31EjX8+AA/6CTc5mhdrPwi\nA+jfNSf9BJc2DMq5FX7lB1S9WDMuWnF9RiBYg1IL5uDIx9STgzrxBf+nEYVZBgi/\nDXOG0okbU6NTJ1Gmp7ggPp9j8tXpQr6drdeYBhLIZkDFgfwwBr0PbSsotsItbUx4\nxl+Z7txPyVkJGsjljeOAHK436now7G6OM+r8lvS7VtYqLqcpSbdbAg9zxLwR/D1a\n7dFpBUtGHYbEbAJSCG8cqefP6tzQXBjOcVx3cSEp5YsBH3hKNMlerqx/mdLpccvB\npLx3z8oPA5frtNhGkjLPLYqWCFGdJ0SgU+Fs7oZ7igsCAwEAAaOCAqAwggKcMCEG\nA1UdEQQaMBiCFiouYWtzLnNhbnRhbmRlcmJyLmNvcnAwHQYDVR0OBBYEFChyMNfn\nNVPco7Oi+WqZQH69jEWyMB8GA1UdIwQYMBaAFMFQHC8t5RtNJ4oSeV7Bvp3X6NfO\nMIIBOgYDVR0fBIIBMTCCAS0wggEpoIIBJaCCASGGgc5sZGFwOi8vL0NOPUNBLUlu\ndGVybmEtU2FudGFuZGVyLENOPXNydm1ic3B2d2JyMjEsQ049Q0RQLENOPVB1Ymxp\nYyUyMEtleSUyMFNlcnZpY2VzLENOPVNlcnZpY2VzLENOPUNvbmZpZ3VyYXRpb24s\nREM9cHJiYnIsREM9cHJvZHViYW5icixEQz1jb3JwP2NlcnRpZmljYXRlUmV2b2Nh\ndGlvbkxpc3Q/YmFzZT9vYmplY3RDbGFzcz1jUkxEaXN0cmlidXRpb25Qb2ludIZO\naHR0cDovL3Nydm1ic3B2d2JyMjEucHJiYnIucHJvZHViYW5ici5jb3JwL0NlcnRF\nbnJvbGwvQ0EtSW50ZXJuYS1TYW50YW5kZXIuY3JsMIHTBggrBgEFBQcBAQSBxjCB\nwzCBwAYIKwYBBQUHMAKGgbNsZGFwOi8vL0NOPUNBLUludGVybmEtU2FudGFuZGVy\nLENOPUFJQSxDTj1QdWJsaWMlMjBLZXklMjBTZXJ2aWNlcyxDTj1TZXJ2aWNlcyxD\nTj1Db25maWd1cmF0aW9uLERDPXByYmJyLERDPXByb2R1YmFuYnIsREM9Y29ycD9j\nQUNlcnRpZmljYXRlP2Jhc2U/b2JqZWN0Q2xhc3M9Y2VydGlmaWNhdGlvbkF1dGhv\ncml0eTAjBgkrBgEEAYI3FAIEFh4UAFcAZQBiAFMAZQByAHYAZQByADIwDQYJKoZI\nhvcNAQELBQADggEBAMGiQcqqHh/g4WNMYPsv+OUYV3tckYz+3RxVgy8JuD542hro\nYTUHHMFLMbjyvZSz5V5fEhp3Z48CJd3EqdFBZecGCHB+4KhBHuaoTcF6WMpSWHCe\nkhxys8tBX24+6jNoYjyXkL2a2si1SCDHPVbEsJZb/TF4t5dtRwo+zypBDpBkHkCe\n9H8eV8Vlv14SnpWL7DfsN8rWzfIRf31QmUKFDKvixVjohpVN2ONkyF4OZvU692Zt\nZ9z1Qp8l4vNrG/WeUOmH881WknlVyZl/jK/xjtPO9aM0W09BK5u0RBzYMfjC1dWL\nTwPx0xlwGnaHvcSi5A6mwAKVNuRSzMpKsPNO8y0=";
+
+    /* renamed from: я044Fяяя044F044F  reason: contains not printable characters */
+    private char f91915044F044F044F;
+
+    /* renamed from: яя044Fяя044F044F  reason: contains not printable characters */
+    private String f91916044F044F044F;
+
+    /* renamed from: яяяяя044F044F  reason: contains not printable characters */
+    private String f91917044F044F;
+
+    /* renamed from: br.com.santander.sdd.ππλλππλ$πλλλππλ  reason: contains not printable characters */
+    public static class C37044 {
+
+        /* renamed from: Х04250425ХХХХ  reason: contains not printable characters */
+        public static int f9191804250425 = 11;
+
+        /* renamed from: Х0425Х0425ХХХ  reason: contains not printable characters */
+        public static int f9191904250425 = 2;
+
+        /* renamed from: Х0425ХХ0425ХХ  reason: contains not printable characters */
+        public static int f9192004250425 = 0;
+
+        /* renamed from: ХХХ0425ХХХ  reason: contains not printable characters */
+        public static int f919210425 = 1;
+
+        /* renamed from: я044F044Fя044F044F044F  reason: contains not printable characters */
+        private String f91922044F044F044F044F044F;
+        /* access modifiers changed from: private */
+
+        /* renamed from: я044Fя044F044F044F044F  reason: contains not printable characters */
+        public String f91923044F044F044F044F044F;
+
+        /* renamed from: яяя044F044F044F044F  reason: contains not printable characters */
+        private char f91924044F044F044F044F;
+
+        static {
+            try {
+                Class.forName("br.com.santander.sdd.ρθρρρρρ");
+            } catch (ClassNotFoundException | NoClassDefFoundError unused) {
+            }
+        }
+
+        /* renamed from: Е04150415Е0415Е0415  reason: contains not printable characters */
+        public static /* synthetic */ String m1370370415041504150415(C37044 r2) {
+            String str = r2.f91922044F044F044F044F044F;
+            int r1 = m1370420425();
+            if ((r1 * (f919210425 + r1)) % f9191904250425 != 0) {
+                f9191804250425 = 30;
+                f9192004250425 = m1370420425();
+            }
+            return str;
+        }
+
+        /* renamed from: ЕЕЕ04150415Е0415  reason: contains not printable characters */
+        public static /* synthetic */ char m137039041504150415(C37044 r2) {
+            int i = f9191804250425;
+            if (((f919210425 + i) * i) % f9191904250425 != m137040042504250425()) {
+                f9191804250425 = m1370420425();
+                f9192004250425 = 25;
+            }
+            try {
+                return r2.f91924044F044F044F044F;
+            } catch (Exception e) {
+                throw e;
+            }
+        }
+
+        /* renamed from: Х04250425Х0425ХХ  reason: contains not printable characters */
+        public static int m137040042504250425() {
+            return 0;
+        }
+
+        /* renamed from: ХХ0425Х0425ХХ  reason: contains not printable characters */
+        public static int m13704104250425() {
+            return 1;
+        }
+
+        /* renamed from: ХХХХ0425ХХ  reason: contains not printable characters */
+        public static int m1370420425() {
+            return 62;
+        }
+
+        /* renamed from: Е0415041504150415Е0415  reason: contains not printable characters */
+        public C37044 m13704304150415041504150415(String str) {
+            this.f91923044F044F044F044F044F = str;
+            int i = f9191804250425;
+            if (((f919210425 + i) * i) % f9191904250425 != f9192004250425) {
+                f9191804250425 = 38;
+                f9192004250425 = m1370420425();
+            }
+            return this;
+        }
+
+        /* renamed from: Е0415ЕЕЕ04150415  reason: contains not printable characters */
+        public C37044 m137044041504150415(String str) {
+            int i = 3;
+            while (true) {
+                try {
+                    i /= 0;
+                } catch (Exception unused) {
+                    f9191804250425 = 52;
+                    this.f91922044F044F044F044F044F = str;
+                    return this;
+                }
+            }
+        }
+
+        /* renamed from: ЕЕ041504150415Е0415  reason: contains not printable characters */
+        public C37091 m1370450415041504150415() {
+            int i = f9191804250425;
+            if ((i * (f919210425 + i)) % f9191904250425 != 0) {
+                f9191804250425 = 77;
+                f919210425 = 47;
+            }
+            try {
+                return new C37091() {
+
+                    /* renamed from: Х04250425ХХ0425Х  reason: contains not printable characters */
+                    public static int f91925042504250425 = 2;
+
+                    /* renamed from: Х0425ХХХ0425Х  reason: contains not printable characters */
+                    public static int f9192604250425 = 0;
+
+                    /* renamed from: ХХ0425ХХ0425Х  reason: contains not printable characters */
+                    public static int f9192704250425 = 1;
+
+                    /* renamed from: ХХХХХ0425Х  reason: contains not printable characters */
+                    public static int f919280425 = 78;
+
+                    static {
+                        try {
+                            Class.forName("br.com.santander.sdd.ρθρρρρρ");
+                        } catch (ClassNotFoundException | NoClassDefFoundError unused) {
+                        }
+                    }
+
+                    /* renamed from: Х0425Х0425Х0425Х  reason: contains not printable characters */
+                    public static int m137047042504250425() {
+                        return 0;
+                    }
+
+                    /* renamed from: ХХХ0425Х0425Х  reason: contains not printable characters */
+                    public static int m13704804250425() {
+                        return 55;
+                    }
+
+                    /* renamed from: Т04220422Т04220422Т  reason: contains not printable characters */
+                    public String m1370490422042204220422() {
+                        int i = f919280425;
+                        if (((f9192704250425 + i) * i) % f91925042504250425 != m137047042504250425()) {
+                            f919280425 = m13704804250425();
+                            f9192604250425 = m13704804250425();
+                        }
+                        return "";
+                    }
+
+                    /* renamed from: Т0422Т042204220422Т  reason: contains not printable characters */
+                    public String m1370500422042204220422() {
+                        int i = f919280425;
+                        if (((f9192704250425 + i) * i) % f91925042504250425 != f9192604250425) {
+                            f919280425 = m13704804250425();
+                            f9192604250425 = 86;
+                        }
+                        return C37044.m1370370415041504150415(C37044.this);
+                    }
+
+                    /* renamed from: Т0422ТТ04220422Т  reason: contains not printable characters */
+                    public String[] m137051042204220422() {
+                        String[] strArr = new String[1];
+                        int i = f919280425;
+                        if (((f9192704250425 + i) * i) % f91925042504250425 != f9192604250425) {
+                            f919280425 = m13704804250425();
+                            f9192604250425 = m13704804250425();
+                        }
+                        strArr[0] = C37044.this.f91923044F044F044F044F044F;
+                        return strArr;
+                    }
+
+                    /* renamed from: ТТ0422042204220422Т  reason: contains not printable characters */
+                    public String m1370520422042204220422() {
+                        String radioVersion = Build.getRadioVersion();
+                        if (((m13704804250425() + f9192704250425) * m13704804250425()) % f91925042504250425 != f9192604250425) {
+                            f919280425 = 72;
+                            f9192604250425 = m13704804250425();
+                        }
+                        return radioVersion;
+                    }
+
+                    /* renamed from: ТТ0422Т04220422Т  reason: contains not printable characters */
+                    public String m137053042204220422() {
+                        try {
+                            throw null;
+                        } catch (Exception unused) {
+                            f919280425 = m13704804250425();
+                            return "MB";
+                        }
+                    }
+
+                    /* renamed from: ТТТ042204220422Т  reason: contains not printable characters */
+                    public String m137054042204220422() {
+                        return C37044.m1370370415041504150415(C37044.this);
+                    }
+                };
+            } catch (Exception e) {
+                throw e;
+            }
+        }
+
+        /* renamed from: ЕЕЕЕЕ04150415  reason: contains not printable characters */
+        public C37044 m13704604150415(char c) {
+            if (((m1370420425() + m13704104250425()) * m1370420425()) % f9191904250425 != f9192004250425) {
+                f9191804250425 = m1370420425();
+                f9192004250425 = m1370420425();
+            }
+            try {
+                this.f91924044F044F044F044F = c;
+                return this;
+            } catch (Exception e) {
+                throw e;
+            }
+        }
+    }
+
+    /* JADX WARNING: Can't wrap try/catch for region: R(8:0|1|2|3|4|(3:6|12|(2:14|(2:16|(2:18|(2:20|(3:29|30|(2:32|(1:(3:(1:(1:(4:28|49|58|59)(3:50|51|52))(1:53))(4:54|55|56|57)|60|74)(4:61|62|63|75))(2:64|(2:65|66)))))(4:33|34|35|(2:37|(0)(0))))(4:38|39|40|(2:42|(0)(0))))(2:43|(2:45|(0)(0))))(2:46|(2:48|(0)(0))))(4:7|8|9|(2:11|(0)(0)))|22|(0)(0)) */
+    /* JADX WARNING: Code restructure failed: missing block: B:71:0x00b1, code lost:
+        r0 = move-exception;
+     */
+    /* JADX WARNING: Code restructure failed: missing block: B:72:0x00b2, code lost:
+        throw r0;
+     */
+    /* JADX WARNING: Failed to process nested try/catch */
+    /* JADX WARNING: Missing exception handler attribute for start block: B:3:0x0009 */
+    /* JADX WARNING: Removed duplicated region for block: B:24:0x003e A[Catch:{ Exception -> 0x00af }] */
+    /* JADX WARNING: Removed duplicated region for block: B:64:0x009f A[Catch:{ Exception -> 0x00af }] */
+    /* JADX WARNING: Removed duplicated region for block: B:6:0x001c A[Catch:{ Exception -> 0x00b1 }] */
+    /* JADX WARNING: Removed duplicated region for block: B:7:0x001d A[Catch:{ Exception -> 0x00b1 }] */
+    static {
+        /*
+            java.lang.String r6 = "P"
+            java.lang.String r1 = ""
+            java.lang.String r0 = "br.com.santander.sdd.ρθρρρρρ"
+            java.lang.Class.forName(r0)     // Catch:{ ClassNotFoundException | NoClassDefFoundError -> 0x0009 }
+        L_0x0009:
+            f91907044F044F044F044F = r1     // Catch:{ Exception -> 0x00b1 }
+            f91910044F044F044F044F = r1     // Catch:{ Exception -> 0x00b1 }
+            f91904044F044F044F044F044F = r6     // Catch:{ Exception -> 0x00b1 }
+            int r7 = r6.hashCode()     // Catch:{ Exception -> 0x00b1 }
+            r0 = 68
+            r5 = 4
+            r4 = 3
+            r3 = 2
+            r2 = 1
+            r1 = -1
+            if (r7 == r0) goto L_0x001d
+            goto L_0x0027
+        L_0x001d:
+            java.lang.String r0 = "D"
+            boolean r0 = r6.equals(r0)     // Catch:{ Exception -> 0x00af }
+            if (r0 == 0) goto L_0x003b
+            r0 = 1
+            goto L_0x003c
+        L_0x0027:
+            r0 = 76
+            if (r7 == r0) goto L_0x006d
+            r0 = 72
+            if (r7 == r0) goto L_0x0063
+            r0 = 73
+            if (r7 == r0) goto L_0x0059
+            r0 = 79
+            if (r7 == r0) goto L_0x004f
+            r0 = 80
+            if (r7 == r0) goto L_0x0047
+        L_0x003b:
+            r0 = -1
+        L_0x003c:
+            if (r0 == 0) goto L_0x009f
+            if (r0 == r2) goto L_0x0096
+            if (r0 == r3) goto L_0x0088
+            if (r0 == r4) goto L_0x0081
+            if (r0 == r5) goto L_0x007a
+            goto L_0x0077
+        L_0x0047:
+            boolean r0 = r6.equals(r6)     // Catch:{ Exception -> 0x00b1 }
+            if (r0 == 0) goto L_0x003b
+            r0 = 5
+            goto L_0x003c
+        L_0x004f:
+            java.lang.String r0 = "O"
+            boolean r0 = r6.equals(r0)     // Catch:{ Exception -> 0x00af }
+            if (r0 == 0) goto L_0x003b
+            r0 = 4
+            goto L_0x003c
+        L_0x0059:
+            java.lang.String r0 = "I"
+            boolean r0 = r6.equals(r0)     // Catch:{ Exception -> 0x00b1 }
+            if (r0 == 0) goto L_0x003b
+            r0 = 3
+            goto L_0x003c
+        L_0x0063:
+            java.lang.String r0 = "H"
+            boolean r0 = r6.equals(r0)     // Catch:{ Exception -> 0x00b1 }
+            if (r0 == 0) goto L_0x003b
+            r0 = 2
+            goto L_0x003c
+        L_0x006d:
+            java.lang.String r0 = "L"
+            boolean r0 = r6.equals(r0)     // Catch:{ Exception -> 0x00b1 }
+            if (r0 == 0) goto L_0x003b
+            r0 = 0
+            goto L_0x003c
+        L_0x0077:
+            java.lang.String r0 = "https://sdd.santander.com.br/handshaker/"
+            goto L_0x008f
+        L_0x007a:
+            java.lang.String r0 = "https://sddocu.aks.santanderbr.corp/handshaker/"
+            f91907044F044F044F044F = r0     // Catch:{ Exception -> 0x00b1 }
+            java.lang.String r0 = "MIIGGTCCBQGgAwIBAgITMgAAGXUmJfgyABbo5wAAAAAZdTANBgkqhkiG9w0BAQsF\nADBoMRQwEgYKCZImiZPyLGQBGRYEY29ycDEaMBgGCgmSJomT8ixkARkWCnByb2R1\nYmFuYnIxFTATBgoJkiaJk/IsZAEZFgVwcmJicjEdMBsGA1UEAxMUQ0EtSW50ZXJu\nYS1TYW50YW5kZXIwHhcNMjEwMjAzMDUyMjE5WhcNMjQwMjAzMDUzMjE5WjCBgTEL\nMAkGA1UEBhMCQlIxEjAQBgNVBAgTCVNBTyBQQVVMTzESMBAGA1UEBxMJU0FPIFBB\nVUxPMRgwFgYDVQQKEw9HUlVQTyBTQU5UQU5ERVIxDzANBgNVBAsTBkJSQVNJTDEf\nMB0GA1UEAwwWKi5ha3Muc2FudGFuZGVyYnIuY29ycDCCASIwDQYJKoZIhvcNAQEB\nBQADggEPADCCAQoCggEBAJ//9FFrecW0B9+8Tna7Dy31EjX8+AA/6CTc5mhdrPwi\nA+jfNSf9BJc2DMq5FX7lB1S9WDMuWnF9RiBYg1IL5uDIx9STgzrxBf+nEYVZBgi/\nDXOG0okbU6NTJ1Gmp7ggPp9j8tXpQr6drdeYBhLIZkDFgfwwBr0PbSsotsItbUx4\nxl+Z7txPyVkJGsjljeOAHK436now7G6OM+r8lvS7VtYqLqcpSbdbAg9zxLwR/D1a\n7dFpBUtGHYbEbAJSCG8cqefP6tzQXBjOcVx3cSEp5YsBH3hKNMlerqx/mdLpccvB\npLx3z8oPA5frtNhGkjLPLYqWCFGdJ0SgU+Fs7oZ7igsCAwEAAaOCAqAwggKcMCEG\nA1UdEQQaMBiCFiouYWtzLnNhbnRhbmRlcmJyLmNvcnAwHQYDVR0OBBYEFChyMNfn\nNVPco7Oi+WqZQH69jEWyMB8GA1UdIwQYMBaAFMFQHC8t5RtNJ4oSeV7Bvp3X6NfO\nMIIBOgYDVR0fBIIBMTCCAS0wggEpoIIBJaCCASGGgc5sZGFwOi8vL0NOPUNBLUlu\ndGVybmEtU2FudGFuZGVyLENOPXNydm1ic3B2d2JyMjEsQ049Q0RQLENOPVB1Ymxp\nYyUyMEtleSUyMFNlcnZpY2VzLENOPVNlcnZpY2VzLENOPUNvbmZpZ3VyYXRpb24s\nREM9cHJiYnIsREM9cHJvZHViYW5icixEQz1jb3JwP2NlcnRpZmljYXRlUmV2b2Nh\ndGlvbkxpc3Q/YmFzZT9vYmplY3RDbGFzcz1jUkxEaXN0cmlidXRpb25Qb2ludIZO\naHR0cDovL3Nydm1ic3B2d2JyMjEucHJiYnIucHJvZHViYW5ici5jb3JwL0NlcnRF\nbnJvbGwvQ0EtSW50ZXJuYS1TYW50YW5kZXIuY3JsMIHTBggrBgEFBQcBAQSBxjCB\nwzCBwAYIKwYBBQUHMAKGgbNsZGFwOi8vL0NOPUNBLUludGVybmEtU2FudGFuZGVy\nLENOPUFJQSxDTj1QdWJsaWMlMjBLZXklMjBTZXJ2aWNlcyxDTj1TZXJ2aWNlcyxD\nTj1Db25maWd1cmF0aW9uLERDPXByYmJyLERDPXByb2R1YmFuYnIsREM9Y29ycD9j\nQUNlcnRpZmljYXRlP2Jhc2U/b2JqZWN0Q2xhc3M9Y2VydGlmaWNhdGlvbkF1dGhv\ncml0eTAjBgkrBgEEAYI3FAIEFh4UAFcAZQBiAFMAZQByAHYAZQByADIwDQYJKoZI\nhvcNAQELBQADggEBAMGiQcqqHh/g4WNMYPsv+OUYV3tckYz+3RxVgy8JuD542hro\nYTUHHMFLMbjyvZSz5V5fEhp3Z48CJd3EqdFBZecGCHB+4KhBHuaoTcF6WMpSWHCe\nkhxys8tBX24+6jNoYjyXkL2a2si1SCDHPVbEsJZb/TF4t5dtRwo+zypBDpBkHkCe\n9H8eV8Vlv14SnpWL7DfsN8rWzfIRf31QmUKFDKvixVjohpVN2ONkyF4OZvU692Zt\nZ9z1Qp8l4vNrG/WeUOmH881WknlVyZl/jK/xjtPO9aM0W09BK5u0RBzYMfjC1dWL\nTwPx0xlwGnaHvcSi5A6mwAKVNuRSzMpKsPNO8y0="
+            goto L_0x0093
+        L_0x0081:
+            java.lang.String r0 = "https://sddhi.santander.com.br/handshaker/"
+            f91907044F044F044F044F = r0     // Catch:{ Exception -> 0x00b1 }
+            java.lang.String r0 = "MIIG0DCCBbigAwIBAgIQeFfg7o6LkXqIM25nftDzcDANBgkqhkiG9w0BAQsFADCB\nujELMAkGA1UEBhMCVVMxFjAUBgNVBAoTDUVudHJ1c3QsIEluYy4xKDAmBgNVBAsT\nH1NlZSB3d3cuZW50cnVzdC5uZXQvbGVnYWwtdGVybXMxOTA3BgNVBAsTMChjKSAy\nMDEyIEVudHJ1c3QsIEluYy4gLSBmb3IgYXV0aG9yaXplZCB1c2Ugb25seTEuMCwG\nA1UEAxMlRW50cnVzdCBDZXJ0aWZpY2F0aW9uIEF1dGhvcml0eSAtIEwxSzAeFw0y\nMTExMTkxMzUxMTdaFw0yMjExMTkxMzUxMTdaMIGBMQswCQYDVQQGEwJFUzESMBAG\nA1UECBMJQ2FudGFicmlhMRIwEAYDVQQHEwlTYW50YW5kZXIxGDAWBgNVBAoTD0dS\nVVBPIFNBTlRBTkRFUjEPMA0GA1UECxMGQlJBU0lMMR8wHQYDVQQDExZzZGRoaS5z\nYW50YW5kZXIuY29tLmJyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA\nkguHpP1zgajMDx55H+c/QmfJn7UDpk+Z1X6V3LCzrUQ55DKzCbUAGar6OG7Nodca\nexBotHfgca+lrvWaHkfUYTWse+qTCyUAf0cSBdhwTOF2iX6Wexa6yUKog4oAbOeD\nVCRXX3tgE3IS9rwDeAy5qpS/B8CVCfI6pV37h6D1B/mCur3kjFX0aIWnvuAmkUXy\nTn4bh8z4IfmM9Ch9XWzLDBJ0bNZ0IacBsTqhN9E6T4UpeHM/RG19sP4FuUcRxS6R\ncSuuWVPnTgf24Zm/Ae/Ayq3O3bt/3Pg4AxGzljIEastq+JNWRra4xtgrdM62i875\nYtnAZr7BDVcu9OAX0+2CQwIDAQABo4IDBzCCAwMwDAYDVR0TAQH/BAIwADAdBgNV\nHQ4EFgQUqzxynQ4F+6MaA/YoCYB2WHy0a58wHwYDVR0jBBgwFoAUgqJwdN28Uz/P\ne9T3zX+nYMYKTL8waAYIKwYBBQUHAQEEXDBaMCMGCCsGAQUFBzABhhdodHRwOi8v\nb2NzcC5lbnRydXN0Lm5ldDAzBggrBgEFBQcwAoYnaHR0cDovL2FpYS5lbnRydXN0\nLm5ldC9sMWstY2hhaW4yNTYuY2VyMDMGA1UdHwQsMCowKKAmoCSGImh0dHA6Ly9j\ncmwuZW50cnVzdC5uZXQvbGV2ZWwxay5jcmwwIQYDVR0RBBowGIIWc2RkaGkuc2Fu\ndGFuZGVyLmNvbS5icjAOBgNVHQ8BAf8EBAMCBaAwEwYDVR0lBAwwCgYIKwYBBQUH\nAwEwTAYDVR0gBEUwQzA3BgpghkgBhvpsCgEFMCkwJwYIKwYBBQUHAgEWG2h0dHBz\nOi8vd3d3LmVudHJ1c3QubmV0L3JwYTAIBgZngQwBAgIwggF8BgorBgEEAdZ5AgQC\nBIIBbASCAWgBZgB1AFYUBpov18Ls0/XhvUSyPsdGdrm8mRFcwO+UmFXWidDdAAAB\nfTh3PosAAAQDAEYwRAIgJqSc64b1ivMCUGTsUxqetYAwQq4zq8DBp98qeL7bOsQC\nIAn6N/kFT+wvDcNEe4VqlXvU4oUrYCMj8akiO2n6tt/hAHYA36Veq2iCTx9sre64\nX04+WurNohKkal6OOxLAIERcKnMAAAF9OHc+fAAABAMARzBFAiEA4Mktr2Wzqqvp\niK3BbLMLKylVfdce7gXlUnHLpS/E0kACIGqtpbYjpU+MqBiyVy2IfawvhCHyN0X4\nj1TeFBCG0smOAHUARqVV63X6kSAwtaKJafTzfREsQXS+/Um4havy/HD+bUcAAAF9\nOHc+swAABAMARjBEAiBSJriHSQ5OC7SHBDYXdI6yYNemSFraFGM+zyixJHso+QIg\nOUP3GhdSNkCdw+DpRWArL70eCy3AeYOrfU7vmrllnp4wDQYJKoZIhvcNAQELBQAD\nggEBAHHU2oc/h5lp5s7c7nQJFMtegF+eGKUklUSSAH0tuUCLb6RlH32aVHhwwrk+\nwQdBN4Gu20oLIaiVkjx3CkKM1hYPzwF5cGCxEBzm2UoGRerBlh6kqKZl4w+tZHV0\nNM0SpLHYAvLTaCIH9ucrwbCtf04mlcPU3/Dd7jR/6osCG3IDOy3hVDvVD3nyxtH5\nvZ893+iaYJsHsMoy07F4VL32CJ7zfoHpCKRbCVOSH+iABauIOeXnt7Ms2nsAcLtt\nbs68VlxQEQSGrgoIndS0dQH0qedWjHrXdPylFb0W6GYrEGBqIbI2SFpu/bMXZ/VN\nHN75CuhXgt8JL6Jxcjdblw7r+Yo="
+            goto L_0x0093
+        L_0x0088:
+            java.lang.String r0 = "https://sdd.paas.santanderbr.pre.corp/handshaker/"
+            f91907044F044F044F044F = r0     // Catch:{ Exception -> 0x00af }
+            java.lang.String r0 = "MIIGDDCCBPSgAwIBAgITMgAAFLUScDhGg/lLWwAAAAAUtTANBgkqhkiG9w0BAQsF\nADBoMRQwEgYKCZImiZPyLGQBGRYEY29ycDEaMBgGCgmSJomT8ixkARkWCnByb2R1\nYmFuYnIxFTATBgoJkiaJk/IsZAEZFgVwcmJicjEdMBsGA1UEAxMUQ0EtSW50ZXJu\nYS1TYW50YW5kZXIwHhcNMjAwNTExMTgxMDQxWhcNMjMwNTExMTgyMDQxWjCBhjEL\nMAkGA1UEBhMCQlIxEjAQBgNVBAgTCVNhbyBQYXVsbzESMBAGA1UEBxMJU2FvIFBh\ndWxvMRgwFgYDVQQKEw9HUlVQTyBTQU5UQU5ERVIxDzANBgNVBAsTBkJSQVNJTDEk\nMCIGA1UEAxQbKi5wYWFzLnNhbnRhbmRlcmJyLnByZS5jb3JwMIIBIjANBgkqhkiG\n9w0BAQEFAAOCAQ8AMIIBCgKCAQEAr2RuxbRT8q34lOwpsc4Sp9zMJQik5XSxoAxG\ngsKKfXN4N0ccr/PCL3XuRoGrP19PJn+VCJYvogQq5SQPhllnaoJ8lLkhb7r8/X7S\njl7/OV890+17tXA4TCIUAQjCOvHGLaa8h8snmiHshAJeR1p+58GgHSDG1Dhir9UV\ncGx3nj2eiNwclg7uty8AteqiUx6jRfu3zL3IQtkKTYjPWE82q5nhaW0m5Mfj2bp6\n7Rr5Ejh/JiO4W7VTHDfJQOnPWvFvrSKL3rI1+QwaT05mGmWqUB12HqgHfgwZ/HQc\nbDunxal/cW0lxF+G3vdwvRidLKQ5/AuN9tJwff4mOczfQDsK4wIDAQABo4ICjjCC\nAoowJgYDVR0RBB8wHYIbKi5wYWFzLnNhbnRhbmRlcmJyLnByZS5jb3JwMB0GA1Ud\nDgQWBBQYWRGUei+nEjvJ9ptuR4wInG7UIDAfBgNVHSMEGDAWgBTBUBwvLeUbTSeK\nEnlewb6d1+jXzjCCAToGA1UdHwSCATEwggEtMIIBKaCCASWgggEhhoHObGRhcDov\nLy9DTj1DQS1JbnRlcm5hLVNhbnRhbmRlcixDTj1zcnZtYnNwdndicjIxLENOPUNE\nUCxDTj1QdWJsaWMlMjBLZXklMjBTZXJ2aWNlcyxDTj1TZXJ2aWNlcyxDTj1Db25m\naWd1cmF0aW9uLERDPXByYmJyLERDPXByb2R1YmFuYnIsREM9Y29ycD9jZXJ0aWZp\nY2F0ZVJldm9jYXRpb25MaXN0P2Jhc2U/b2JqZWN0Q2xhc3M9Y1JMRGlzdHJpYnV0\naW9uUG9pbnSGTmh0dHA6Ly9zcnZtYnNwdndicjIxLnByYmJyLnByb2R1YmFuYnIu\nY29ycC9DZXJ0RW5yb2xsL0NBLUludGVybmEtU2FudGFuZGVyLmNybDCB0wYIKwYB\nBQUHAQEEgcYwgcMwgcAGCCsGAQUFBzAChoGzbGRhcDovLy9DTj1DQS1JbnRlcm5h\nLVNhbnRhbmRlcixDTj1BSUEsQ049UHVibGljJTIwS2V5JTIwU2VydmljZXMsQ049\nU2VydmljZXMsQ049Q29uZmlndXJhdGlvbixEQz1wcmJicixEQz1wcm9kdWJhbmJy\nLERDPWNvcnA/Y0FDZXJ0aWZpY2F0ZT9iYXNlP29iamVjdENsYXNzPWNlcnRpZmlj\nYXRpb25BdXRob3JpdHkwDAYDVR0TAQH/BAIwADANBgkqhkiG9w0BAQsFAAOCAQEA\nPzG1OYnuymxrvpaoxrDoFhv3EbP5jDCZxO/FJIYXaqWir2lVr2+8kl3SnoK4FlG4\nUg9ojIIp6Bv3UkmhxXxocucnT2W+pgpWqetoDou2HLzsnRIQvad4lJBKnq/4Z9M8\nT76ouGAaupdx8mxUXlOusF1PnvCSa/Or2O5VztYQi/vE6kYD9byZ4g1NrMEN9jNh\nEHhZhVHzfc42yMuglOcY1Uj4ztnD54E/kgyZ9M6gknyW6j7zkeFzLB1eyctu2FNi\nfiBA1MkrfcpbiF1Xsco1hkLz1HhWad1b6mCVnbdvlBvgudG0UC02RCjrftaf3+12\nl6UdKdrZsNwG9j+2Ebqq3A=="
+            goto L_0x0093
+        L_0x008f:
+            f91907044F044F044F044F = r0     // Catch:{ Exception -> 0x00b1 }
+            java.lang.String r0 = "MIIEPjCCAyagAwIBAgIESlOMKDANBgkqhkiG9w0BAQsFADCBvjELMAkGA1UEBhMC\nVVMxFjAUBgNVBAoTDUVudHJ1c3QsIEluYy4xKDAmBgNVBAsTH1NlZSB3d3cuZW50\ncnVzdC5uZXQvbGVnYWwtdGVybXMxOTA3BgNVBAsTMChjKSAyMDA5IEVudHJ1c3Qs\nIEluYy4gLSBmb3IgYXV0aG9yaXplZCB1c2Ugb25seTEyMDAGA1UEAxMpRW50cnVz\ndCBSb290IENlcnRpZmljYXRpb24gQXV0aG9yaXR5IC0gRzIwHhcNMDkwNzA3MTcy\nNTU0WhcNMzAxMjA3MTc1NTU0WjCBvjELMAkGA1UEBhMCVVMxFjAUBgNVBAoTDUVu\ndHJ1c3QsIEluYy4xKDAmBgNVBAsTH1NlZSB3d3cuZW50cnVzdC5uZXQvbGVnYWwt\ndGVybXMxOTA3BgNVBAsTMChjKSAyMDA5IEVudHJ1c3QsIEluYy4gLSBmb3IgYXV0\naG9yaXplZCB1c2Ugb25seTEyMDAGA1UEAxMpRW50cnVzdCBSb290IENlcnRpZmlj\nYXRpb24gQXV0aG9yaXR5IC0gRzIwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEK\nAoIBAQC6hLZy254Ma+KZ6TABp3bqMriVQRrJ2mFOWHLP/vaCeb9zYQYKpSfYs1/T\nRU4cctZOMvJyig/3gxnQaoCAAEUesMfnmr8SVycco2gvCoe9amsOXmXzHHfV1IWN\ncCG0szLni6LVhjkCsbjSR87kyUnEO6fe+1R9V77w6G7CebI6C1XiUJgWMhNcL3hW\nwcKUs/Ja5CeanyTXxuzQmyWC48zCxEXFjJd6BmsqEZ+pCm5IO2/b1BEZQvePB7/1\nU1+cPvQXLOZprE4yTGJ36rfo5bs0vBmLrpxR57d+tVOxMyLlbc9wPBr64ptntoP0\njaWvYkxN4FisZDQSA/i2jZRjJKRxAgMBAAGjQjBAMA4GA1UdDwEB/wQEAwIBBjAP\nBgNVHRMBAf8EBTADAQH/MB0GA1UdDgQWBBRqciZ60B7vfec7aVHUbI2fkBJmqzAN\nBgkqhkiG9w0BAQsFAAOCAQEAeZ8dlsa2eT8ijYfThwMEYGprmi5ZiXMRrEPR9RP/\njTkrwPK9T3CMqS/qF8QLVJ7UG5aYMzyorWKiAHarWWluBh1+xLlEjZivEtRh2woZ\nRkfz6/djwUAFQKXSt/S1mja/qYh2iARVBCuch38aNzx+LaUa2NSJXsq9rD1s2G2v\n1fN2D807iDginWyTmsQ9v4IbZT+mD12q/OWyFcq1rca8PdCE6OoGcrBNOTJ4vz4R\nnAuknZoh8/CbCzB428Hch0P+vGOaysXCHMnHjf87ElgI5rY97HosTvuDls4MPGmH\nVHOkc8KT/1EQrBVUAdj8BbGJoX90g5pJ19xOe4pIb4tF9g=="
+        L_0x0093:
+            f91910044F044F044F044F = r0     // Catch:{ Exception -> 0x00b1 }
+            goto L_0x00ae
+        L_0x0096:
+            java.lang.String r0 = "https://sdd.paas.isbanbr.dev.corp/handshaker/"
+            f91907044F044F044F044F = r0     // Catch:{ Exception -> 0x00af }
+            java.lang.String r0 = "MIIGBDCCBOygAwIBAgITMgAAFMWEXKe0vQjuKAAAAAAUxTANBgkqhkiG9w0BAQsF\nADBoMRQwEgYKCZImiZPyLGQBGRYEY29ycDEaMBgGCgmSJomT8ixkARkWCnByb2R1\nYmFuYnIxFTATBgoJkiaJk/IsZAEZFgVwcmJicjEdMBsGA1UEAxMUQ0EtSW50ZXJu\nYS1TYW50YW5kZXIwHhcNMjAwNTEzMTUwNDEwWhcNMjMwNTEzMTUxNDEwWjCBgjEL\nMAkGA1UEBhMCQlIxEjAQBgNVBAgTCVNhbyBQYXVsbzESMBAGA1UEBxMJU2FvIFBh\ndWxvMRgwFgYDVQQKEw9HUlVQTyBTQU5UQU5ERVIxDzANBgNVBAsTBkJSQVNJTDEg\nMB4GA1UEAxQXKi5wYWFzLmlzYmFuYnIuZGV2LmNvcnAwggEiMA0GCSqGSIb3DQEB\nAQUAA4IBDwAwggEKAoIBAQC+ImzUJugPzz/Ts9cvezb9tebbPuS2f5GDt0XGnoCr\n9/cpEqOdwBla7pzemRF0XBkj92Q41ylIqsMohwIhaYICtF841BpQLfX5ymewWay0\n1UBiMEqLl47cFDHRDXxsAsoGYvBAig90ulfd3tbHTevyFz0h/1xmoCrxiGdkR33T\nkk8xgqqmphRsSXmQBl7yfdH+tbYZy+qdowDOKzs2bmc5uG7mUdecvzuSltihdEOE\n8LU/qmP/EuqQr224AQUnKe9EbTbDRTCO7bj/L2r6Xg82B4ET4KKgiWplwpo2oR4b\nkGtRVgfHaku0GFNOMpqxEBOcnC7e7Iuuaxf/eD6AACn3AgMBAAGjggKKMIIChjAi\nBgNVHREEGzAZghcqLnBhYXMuaXNiYW5ici5kZXYuY29ycDAdBgNVHQ4EFgQUF0Li\ndVc47QLG1qxXZFBKAUl5Cm8wHwYDVR0jBBgwFoAUwVAcLy3lG00nihJ5XsG+ndfo\n184wggE6BgNVHR8EggExMIIBLTCCASmgggEloIIBIYaBzmxkYXA6Ly8vQ049Q0Et\nSW50ZXJuYS1TYW50YW5kZXIsQ049c3J2bWJzcHZ3YnIyMSxDTj1DRFAsQ049UHVi\nbGljJTIwS2V5JTIwU2VydmljZXMsQ049U2VydmljZXMsQ049Q29uZmlndXJhdGlv\nbixEQz1wcmJicixEQz1wcm9kdWJhbmJyLERDPWNvcnA/Y2VydGlmaWNhdGVSZXZv\nY2F0aW9uTGlzdD9iYXNlP29iamVjdENsYXNzPWNSTERpc3RyaWJ1dGlvblBvaW50\nhk5odHRwOi8vc3J2bWJzcHZ3YnIyMS5wcmJici5wcm9kdWJhbmJyLmNvcnAvQ2Vy\ndEVucm9sbC9DQS1JbnRlcm5hLVNhbnRhbmRlci5jcmwwgdMGCCsGAQUFBwEBBIHG\nMIHDMIHABggrBgEFBQcwAoaBs2xkYXA6Ly8vQ049Q0EtSW50ZXJuYS1TYW50YW5k\nZXIsQ049QUlBLENOPVB1YmxpYyUyMEtleSUyMFNlcnZpY2VzLENOPVNlcnZpY2Vz\nLENOPUNvbmZpZ3VyYXRpb24sREM9cHJiYnIsREM9cHJvZHViYW5icixEQz1jb3Jw\nP2NBQ2VydGlmaWNhdGU/YmFzZT9vYmplY3RDbGFzcz1jZXJ0aWZpY2F0aW9uQXV0\naG9yaXR5MAwGA1UdEwEB/wQCMAAwDQYJKoZIhvcNAQELBQADggEBADM4Zx8GVKtg\nHYS3KY0fOUBZByIs1u1CpS5YKj09Xb4EVjW0/USAvPEFcXRa2UvnpY4OfLF72zj4\nsMeBfhQySzMIUrOVzPnGZpYsqurxCUL79+aq3PeQcB0sl97rgq0Wv+IU42DBhbXb\nJjRHK4GwyZO2gII0CRQPeujVMZr+HOJDe9bRdzdPKlQG9FP6ttkKJ4DKvAPN0wPk\nWiFxB4f1VsrwBrIUYqCmVvTn83jQBws6pkvPPZjiy5G9hSTMfsem/vIbgcjySWEj\n0ciRCC6jF1Oj8AnQi2LMXbQIXF7RM5eYqcUUBbwCweAPYcN1KZo9Y04hAUZHy/HO\neO6rfYV1qu0="
+            f91910044F044F044F044F = r0     // Catch:{ Exception -> 0x00af }
+            goto L_0x00ae
+        L_0x009f:
+            java.lang.String r0 = "https://192.168.15.6/handshaker/"
+            f91907044F044F044F044F = r0     // Catch:{ Exception -> 0x00af }
+            java.lang.String r0 = "MIIDHzCCAgcCFA4p/ZE3HzDm5w0MSLINGsA1VB5IMA0GCSqGSIb3DQEBCwUAMFIx\nCzAJBgNVBAYTAlVTMQswCQYDVQQIDAJJTDEWMBQGA1UECgwNUmFuY2hlciwgSW5j\nLjEeMBwGA1UEAwwVcmFuY2hlci5zdXBwb3J0LnRvb2xzMB4XDTIyMDgyMjE3NTMy\nNloXDTIyMDgyMzE3NTMyNlowRjELMAkGA1UEBhMCVVMxCzAJBgNVBAgMAklMMRYw\nFAYDVQQKDA1SYW5jaGVyLCBJbmMuMRIwEAYDVQQDDAkxMC40My4wLjEwggEiMA0G\nCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCswNz5IO5E1mnV6T8BAhODtxL4Gert\nOKhT/GHOuo30AgLHPupGll0rrw0oh+UBsSWoZcW8LIpyE8yAtT4CZ3PBBNGzupsS\nTF1fyM7fkkOvKGW5858IIN2NkH4Z3ANECYwolcJVsgkSGH0hPIb9sypjcV+ipvxL\n3E6P6QNmVv0hYktxfMe7znBGA/aDGjaynYd4FsinVOFVBzqrgBXON+yBcwTuUWrc\negxcMvMHMw8Ra/n0FszEcZtr7e3QwtZaauueawlpVSBuwdw95LMgp2awSa2gvEGH\nv65b0h1A/PCgtvDd5hk3cPCYR7h4ljzzxeLgHJAG2uNuoy2pLPct8PXXAgMBAAEw\nDQYJKoZIhvcNAQELBQADggEBAJpxDJebOEi+JFZTQ0ABeUdt5ApzHynClbUuXZ9S\nbTe5kFepyzG8NPScWb42htOKHwdpLLpE7z4DAIBuVA+gZS5NTNB9h2BTaNDhbyqP\n40DpVBsNtyIe6dTY11VeYRW3rHqD+5kM3O//qOd0YrpXPzygUEq+mmP2lfac2JOZ\nJvXCx2NYAL4F70BzQ53hqp1wKJgu+JE7fg3YmujwuhTUJ5TxWLOIrnoamxMvE86y\nGnb4yfSAbKMdoobmZNiNYNO2zUApWIURPTzx/iQxuM8HbQbB22BRH5sEK+ebg3gw\nlOTilONJWUY3FAdkjgDHzOgDkeU6UruEboX+tnaQzrTHO78="
+            f91910044F044F044F044F = r0     // Catch:{ Exception -> 0x00af }
+        L_0x00a7:
+            int[] r0 = new int[r1]     // Catch:{ Exception -> 0x00aa }
+            goto L_0x00a7
+        L_0x00aa:
+            r0 = 51
+            f91903041A041A041A = r0
+        L_0x00ae:
+            return
+        L_0x00af:
+            r0 = move-exception
+            throw r0
+        L_0x00b1:
+            r0 = move-exception
+            throw r0
+        */
+        throw new UnsupportedOperationException("Method not decompiled: p043br.com.santander.sdd.C37043.<clinit>():void");
+    }
+
+    public C37043() {
+    }
+
+    public C37043(C37044 r2) {
+        this.f91917044F044F = C37044.m1370370415041504150415(r2);
+        this.f91915044F044F044F = C37044.m137039041504150415(r2);
+        this.f91916044F044F044F = r2.f91923044F044F044F044F044F;
+    }
+
+    /* renamed from: ЕЕ0415ЕЕ04150415  reason: contains not printable characters */
+    public static C37091 m137029041504150415() {
+        int i = f91903041A041A041A;
+        if (((f91902041A041A041A041A + i) * i) % f91900041A041A041A041A041A != f91901041A041A041A041A) {
+            f91903041A041A041A = m137030041A041A041A041A();
+            f91901041A041A041A041A = 58;
+        }
+        try {
+            if (f91912044F044F044F044F == null) {
+                try {
+                    f91912044F044F044F044F = new C37043();
+                } catch (Exception e) {
+                    throw e;
+                }
+            }
+            return f91912044F044F044F044F;
+        } catch (Exception e2) {
+            throw e2;
+        }
+    }
+
+    /* renamed from: ККК041A041A041A041A  reason: contains not printable characters */
+    public static int m137030041A041A041A041A() {
+        return 12;
+    }
+
+    /* renamed from: Т04220422Т04220422Т  reason: contains not printable characters */
+    public String m1370310422042204220422() {
+        int i = f91903041A041A041A;
+        if (((f91902041A041A041A041A + i) * i) % f91900041A041A041A041A041A == f91901041A041A041A041A) {
+            return "";
+        }
+        f91903041A041A041A = m137030041A041A041A041A();
+        f91901041A041A041A041A = m137030041A041A041A041A();
+        return "";
+    }
+
+    /* renamed from: Т0422Т042204220422Т  reason: contains not printable characters */
+    public String m1370320422042204220422() {
+        try {
+            String str = f91907044F044F044F044F;
+            int i = f91903041A041A041A;
+            if (((f91902041A041A041A041A + i) * i) % f91900041A041A041A041A041A != f91901041A041A041A041A) {
+                f91903041A041A041A = m137030041A041A041A041A();
+                f91901041A041A041A041A = 49;
+            }
+            return str;
+        } catch (Exception e) {
+            throw e;
+        }
+    }
+
+    /* renamed from: Т0422ТТ04220422Т  reason: contains not printable characters */
+    public String[] m137033042204220422() {
+        return new String[]{f91910044F044F044F044F};
+    }
+
+    /* renamed from: ТТ0422042204220422Т  reason: contains not printable characters */
+    public String m1370340422042204220422() {
+        String radioVersion = Build.getRadioVersion();
+        int i = f91903041A041A041A;
+        if (((f91902041A041A041A041A + i) * i) % f91900041A041A041A041A041A != f91901041A041A041A041A) {
+            f91903041A041A041A = 50;
+            f91901041A041A041A041A = m137030041A041A041A041A();
+        }
+        return radioVersion;
+    }
+
+    /* renamed from: ТТ0422Т04220422Т  reason: contains not printable characters */
+    public String m137035042204220422() {
+        int i = f91903041A041A041A;
+        if (((f91902041A041A041A041A + i) * i) % f91900041A041A041A041A041A == f91901041A041A041A041A) {
+            return "MB";
+        }
+        f91903041A041A041A = m137030041A041A041A041A();
+        f91901041A041A041A041A = 77;
+        return "MB";
+    }
+
+    /* renamed from: ТТТ042204220422Т  reason: contains not printable characters */
+    public String m137036042204220422() {
+        return f91907044F044F044F044F;
+    }
+}
