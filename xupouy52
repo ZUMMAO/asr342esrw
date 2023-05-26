@@ -1,0 +1,540 @@
+package com.worklight.utils;
+
+import com.google.common.base.Ascii;
+import java.io.UnsupportedEncodingException;
+import org.apache.commons.codec.language.Soundex;
+
+/* loaded from: classes3.dex */
+public class Base64 {
+    private static final byte[] map = {65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 43, 47};
+
+    public static byte[] decode(byte[] bArr) {
+        return decode(bArr, bArr.length);
+    }
+
+    public static byte[] decode(byte[] bArr, int i) {
+        byte b;
+        int i2;
+        int i3;
+        int i4 = (i / 4) * 3;
+        if (i4 == 0) {
+            return new byte[0];
+        }
+        byte[] bArr2 = new byte[i4];
+        int i5 = i;
+        int i6 = 0;
+        while (true) {
+            byte b2 = bArr[i5 - 1];
+            b = 10;
+            if (b2 != 10 && b2 != 13 && b2 != 32 && b2 != 9) {
+                if (b2 != 61) {
+                    break;
+                }
+                i6++;
+            }
+            i5--;
+        }
+        int i7 = 0;
+        int i8 = 0;
+        int i9 = 0;
+        int i10 = 0;
+        while (i7 < i5) {
+            byte b3 = bArr[i7];
+            if (b3 != b && b3 != 13 && b3 != 32 && b3 != 9) {
+                if (b3 >= 65 && b3 <= 90) {
+                    i2 = b3 - 65;
+                } else if (b3 >= 97 && b3 <= 122) {
+                    i2 = b3 - 71;
+                } else if (b3 >= 48 && b3 <= 57) {
+                    i2 = b3 + 4;
+                } else if (b3 == 43) {
+                    i2 = 62;
+                } else if (b3 != 47) {
+                    return null;
+                } else {
+                    i2 = 63;
+                }
+                int i11 = (i8 << 6) | ((byte) i2);
+                if (i10 % 4 == 3) {
+                    int i12 = i9 + 1;
+                    bArr2[i9] = (byte) ((16711680 & i11) >> 16);
+                    int i13 = i12 + 1;
+                    bArr2[i12] = (byte) ((65280 & i11) >> 8);
+                    i3 = i13 + 1;
+                    bArr2[i13] = (byte) (i11 & 255);
+                } else {
+                    i3 = i9;
+                }
+                i10++;
+                i9 = i3;
+                i8 = i11;
+            }
+            i7++;
+            b = 10;
+        }
+        if (i6 > 0) {
+            int i14 = i8 << (i6 * 6);
+            int i15 = i9 + 1;
+            bArr2[i9] = (byte) ((i14 & 16711680) >> 16);
+            if (i6 == 1) {
+                i9 = i15 + 1;
+                bArr2[i15] = (byte) ((i14 & 65280) >> 8);
+            } else {
+                i9 = i15;
+            }
+        }
+        byte[] bArr3 = new byte[i9];
+        System.arraycopy(bArr2, 0, bArr3, 0, i9);
+        return bArr3;
+    }
+
+    public static String encode(byte[] bArr, String str) throws UnsupportedEncodingException {
+        int length = (bArr.length * 4) / 3;
+        byte[] bArr2 = new byte[length + (length / 76) + 3];
+        int length2 = bArr.length - (bArr.length % 3);
+        int i = 0;
+        for (int i2 = 0; i2 < length2; i2 += 3) {
+            int i3 = i + 1;
+            byte[] bArr3 = map;
+            bArr2[i] = bArr3[(bArr[i2] & 255) >> 2];
+            int i4 = i3 + 1;
+            int i5 = i2 + 1;
+            bArr2[i3] = bArr3[((bArr[i2] & 3) << 4) | ((bArr[i5] & 255) >> 4)];
+            int i6 = i4 + 1;
+            int i7 = i2 + 2;
+            bArr2[i4] = bArr3[((bArr[i5] & Ascii.f1163SI) << 2) | ((bArr[i7] & 255) >> 6)];
+            i = i6 + 1;
+            bArr2[i6] = bArr3[bArr[i7] & 63];
+            int i8 = (i + 0) % 76;
+        }
+        switch (bArr.length % 3) {
+            case 1:
+                int i9 = i + 1;
+                byte[] bArr4 = map;
+                bArr2[i] = bArr4[(bArr[length2] & 255) >> 2];
+                int i10 = i9 + 1;
+                bArr2[i9] = bArr4[(bArr[length2] & 3) << 4];
+                int i11 = i10 + 1;
+                bArr2[i10] = 61;
+                i = i11 + 1;
+                bArr2[i11] = 61;
+                break;
+            case 2:
+                int i12 = i + 1;
+                byte[] bArr5 = map;
+                bArr2[i] = bArr5[(bArr[length2] & 255) >> 2];
+                int i13 = i12 + 1;
+                int i14 = length2 + 1;
+                bArr2[i12] = bArr5[((bArr[length2] & 3) << 4) | ((bArr[i14] & 255) >> 4)];
+                int i15 = i13 + 1;
+                bArr2[i13] = bArr5[(bArr[i14] & Ascii.f1163SI) << 2];
+                i = i15 + 1;
+                bArr2[i15] = 61;
+                break;
+        }
+        return new String(bArr2, 0, i, str);
+    }
+
+    public static String encodeUrlSafe(byte[] bArr, String str) throws UnsupportedEncodingException {
+        return encode(bArr, str).replace('+', '-').replace('/', '_');
+    }
+}
+
+package com.worklight.common.security;
+
+import android.content.Context;
+import android.net.wifi.WifiManager;
+import android.os.Build;
+import android.provider.Settings;
+import android.telephony.TelephonyManager;
+import com.worklight.common.Logger;
+import com.worklight.common.WLConfig;
+import com.worklight.utils.Base64;
+import java.io.UnsupportedEncodingException;
+import java.security.InvalidKeyException;
+import java.security.KeyPair;
+import java.security.KeyStore;
+import java.security.NoSuchAlgorithmException;
+import java.security.SignatureException;
+import java.security.interfaces.RSAPublicKey;
+import java.util.UUID;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+/* loaded from: classes3.dex */
+public class WLDeviceAuthManager extends WLCertManager {
+    private static WLDeviceAuthManager instance;
+    private String deviceUuid;
+    private static Logger logger = Logger.getInstance("wl.certManager");
+    private static final Logger log = Logger.getInstance(WLDeviceAuthManager.class.getName());
+    private static String KEYSTORE_FILENAME = ".keystore";
+    private static char[] keyStorePassword = null;
+    private static String DEVICE_ID_ALIAS = "WLDeviceID";
+    private static String MARSHMALLOW_CONSTANT_MAC_ID = "02:00:00:00:00:00";
+
+    public static synchronized WLDeviceAuthManager getInstance() {
+        WLDeviceAuthManager wLDeviceAuthManager;
+        synchronized (WLDeviceAuthManager.class) {
+            if (instance == null) {
+                instance = new WLDeviceAuthManager();
+            }
+            wLDeviceAuthManager = instance;
+        }
+        return wLDeviceAuthManager;
+    }
+
+    protected WLDeviceAuthManager() {
+        super(KEYSTORE_FILENAME, keyStorePassword);
+    }
+
+    @Override // com.worklight.common.security.WLCertManager
+    protected String getAlias(String str) {
+        if (str.equals("application")) {
+            return "app:" + WLConfig.getInstance().getAppId();
+        }
+        return str;
+    }
+
+    public String signDeviceAuth(String str, String str2, boolean z) throws Exception {
+        if (z && isCertificateExists(str2)) {
+            JSONObject jSONObject = new JSONObject();
+            jSONObject.put("alg", "RS256");
+            KeyStore.PrivateKeyEntry privateKeyEntry = getPrivateKeyEntry(str2);
+            jSONObject.put("x5c", Base64.encodeUrlSafe(privateKeyEntry.getCertificate().getEncoded(), "UTF-8"));
+            String jSONObject2 = jSONObject.toString();
+            String str3 = Base64.encodeUrlSafe(jSONObject2.getBytes(), "UTF-8") + "." + Base64.encodeUrlSafe(str.getBytes(), "UTF-8");
+            return str3 + "." + Base64.encodeUrlSafe(signData(str3, privateKeyEntry.getPrivateKey()), "UTF-8");
+        }
+        return str;
+    }
+
+    public String getDeviceUUID(Context context) {
+        KeyStore.SecretKeyEntry secretKeyEntry;
+        if (this.context == null) {
+            this.context = context;
+        }
+        if (this.deviceUuid == null) {
+            try {
+                secretKeyEntry = (KeyStore.SecretKeyEntry) getSecretKeyEntry(DEVICE_ID_ALIAS);
+            } catch (Exception unused) {
+                secretKeyEntry = null;
+            }
+            if (secretKeyEntry == null) {
+                String macAddress = context.getPackageManager().hasSystemFeature("android.hardware.wifi") ? ((WifiManager) context.getSystemService("wifi")).getConnectionInfo().getMacAddress() : null;
+                String string = Settings.Secure.getString(context.getContentResolver(), "android_id");
+                if ("strong".equalsIgnoreCase(WLConfig.getInstance().getWlGenerateDeviceIdStrong())) {
+                    if (macAddress != null && !MARSHMALLOW_CONSTANT_MAC_ID.equals(macAddress)) {
+                        string = string + macAddress;
+                    } else {
+                        log.debug("<#<#>#>=============");
+                        if (Build.VERSION.SDK_INT >= 9) {
+                            String str = Build.SERIAL;
+                            if (str != null) {
+                                log.debug("<~<~>~>=~=~=~=~=~=~");
+                                string = string + str;
+                            } else {
+                                log.debug("<!<!>!>=!=!=!=!=!=!=!=");
+                                try {
+                                    String deviceId = ((TelephonyManager) context.getSystemService("phone")).getDeviceId();
+                                    if (deviceId != null) {
+                                        string = string + deviceId;
+                                    }
+                                } catch (Exception e) {
+                                    log.error("<o<o>o>o!o!o!o!o!o!o!o");
+                                    logger.error("Device UUID could not be generated since IMEI access requires permissions in the AndroidManifest.xml " + e.getMessage(), e);
+                                }
+                            }
+                        }
+                    }
+                } else if (macAddress != null) {
+                    string = string + macAddress;
+                }
+                this.deviceUuid = UUID.nameUUIDFromBytes(string.getBytes()).toString();
+                saveDeviceUUID(DEVICE_ID_ALIAS, this.deviceUuid);
+            } else {
+                this.deviceUuid = new String(secretKeyEntry.getSecretKey().getEncoded());
+            }
+        }
+        return this.deviceUuid;
+    }
+
+    public String signJWS(JSONObject jSONObject, KeyPair keyPair) throws InvalidKeyException, UnsupportedEncodingException, NoSuchAlgorithmException, SignatureException, JSONException {
+        return signJWS(jSONObject, (RSAPublicKey) keyPair.getPublic(), keyPair.getPrivate());
+    }
+
+    /* JADX WARN: Code restructure failed: missing block: B:14:0x006f, code lost:
+        if (r3 == null) goto L18;
+     */
+    /* JADX WARN: Code restructure failed: missing block: B:15:0x0071, code lost:
+        r3.close();
+     */
+    /* JADX WARN: Code restructure failed: missing block: B:34:0x00aa, code lost:
+        if (r3 != null) goto L20;
+     */
+    /* JADX WARN: Code restructure failed: missing block: B:36:0x00ad, code lost:
+        return r9;
+     */
+    /* JADX WARN: Removed duplicated region for block: B:49:0x00a5 A[EXC_TOP_SPLITTER, SYNTHETIC] */
+    /* JADX WARN: Removed duplicated region for block: B:55:0x00b1 A[EXC_TOP_SPLITTER, SYNTHETIC] */
+    /* JADX WARN: Removed duplicated region for block: B:61:0x00b8 A[EXC_TOP_SPLITTER, SYNTHETIC] */
+    /*
+        Code decompiled incorrectly, please refer to instructions dump.
+        To view partially-correct code enable 'Show inconsistent code' option in preferences
+    */
+    private java.security.KeyStore.SecretKeyEntry saveDeviceUUID(java.lang.String r8, java.lang.String r9) {
+        /*
+            r7 = this;
+            r0 = 0
+            java.lang.String r1 = java.security.KeyStore.getDefaultType()     // Catch: java.lang.Throwable -> L83 java.lang.Exception -> L86
+            java.security.KeyStore r1 = java.security.KeyStore.getInstance(r1)     // Catch: java.lang.Throwable -> L83 java.lang.Exception -> L86
+            java.io.File r2 = new java.io.File     // Catch: java.lang.Throwable -> L83 java.lang.Exception -> L86
+            java.lang.StringBuilder r3 = new java.lang.StringBuilder     // Catch: java.lang.Throwable -> L83 java.lang.Exception -> L86
+            r3.<init>()     // Catch: java.lang.Throwable -> L83 java.lang.Exception -> L86
+            android.content.Context r4 = r7.context     // Catch: java.lang.Throwable -> L83 java.lang.Exception -> L86
+            java.io.File r4 = r4.getFilesDir()     // Catch: java.lang.Throwable -> L83 java.lang.Exception -> L86
+            java.lang.String r4 = r4.getAbsolutePath()     // Catch: java.lang.Throwable -> L83 java.lang.Exception -> L86
+            r3.append(r4)     // Catch: java.lang.Throwable -> L83 java.lang.Exception -> L86
+            java.lang.String r4 = "/"
+            r3.append(r4)     // Catch: java.lang.Throwable -> L83 java.lang.Exception -> L86
+            java.lang.String r4 = com.worklight.common.security.WLDeviceAuthManager.KEYSTORE_FILENAME     // Catch: java.lang.Throwable -> L83 java.lang.Exception -> L86
+            r3.append(r4)     // Catch: java.lang.Throwable -> L83 java.lang.Exception -> L86
+            java.lang.String r3 = r3.toString()     // Catch: java.lang.Throwable -> L83 java.lang.Exception -> L86
+            r2.<init>(r3)     // Catch: java.lang.Throwable -> L83 java.lang.Exception -> L86
+            boolean r3 = r2.exists()     // Catch: java.lang.Throwable -> L83 java.lang.Exception -> L86
+            if (r3 == 0) goto L42
+            java.io.FileInputStream r3 = new java.io.FileInputStream     // Catch: java.lang.Throwable -> L83 java.lang.Exception -> L86
+            r3.<init>(r2)     // Catch: java.lang.Throwable -> L83 java.lang.Exception -> L86
+            char[] r4 = com.worklight.common.security.WLDeviceAuthManager.keyStorePassword     // Catch: java.lang.Exception -> L80 java.lang.Throwable -> Lae
+            r1.load(r3, r4)     // Catch: java.lang.Exception -> L80 java.lang.Throwable -> Lae
+            r3.close()     // Catch: java.lang.Exception -> L80 java.lang.Throwable -> Lae
+            goto L48
+        L42:
+            char[] r3 = com.worklight.common.security.WLDeviceAuthManager.keyStorePassword     // Catch: java.lang.Throwable -> L83 java.lang.Exception -> L86
+            r1.load(r0, r3)     // Catch: java.lang.Throwable -> L83 java.lang.Exception -> L86
+            r3 = r0
+        L48:
+            javax.crypto.spec.SecretKeySpec r4 = new javax.crypto.spec.SecretKeySpec     // Catch: java.lang.Exception -> L80 java.lang.Throwable -> Lae
+            byte[] r9 = r9.getBytes()     // Catch: java.lang.Exception -> L80 java.lang.Throwable -> Lae
+            java.lang.String r5 = "DES"
+            r4.<init>(r9, r5)     // Catch: java.lang.Exception -> L80 java.lang.Throwable -> Lae
+            java.security.KeyStore$SecretKeyEntry r9 = new java.security.KeyStore$SecretKeyEntry     // Catch: java.lang.Exception -> L80 java.lang.Throwable -> Lae
+            r9.<init>(r4)     // Catch: java.lang.Exception -> L80 java.lang.Throwable -> Lae
+            java.security.KeyStore$PasswordProtection r4 = new java.security.KeyStore$PasswordProtection     // Catch: java.lang.Exception -> L7e java.lang.Throwable -> Lae
+            char[] r5 = com.worklight.common.security.WLDeviceAuthManager.keyStorePassword     // Catch: java.lang.Exception -> L7e java.lang.Throwable -> Lae
+            r4.<init>(r5)     // Catch: java.lang.Exception -> L7e java.lang.Throwable -> Lae
+            r1.setEntry(r8, r9, r4)     // Catch: java.lang.Exception -> L7e java.lang.Throwable -> Lae
+            java.io.FileOutputStream r8 = new java.io.FileOutputStream     // Catch: java.lang.Exception -> L7e java.lang.Throwable -> Lae
+            r8.<init>(r2)     // Catch: java.lang.Exception -> L7e java.lang.Throwable -> Lae
+            char[] r0 = com.worklight.common.security.WLDeviceAuthManager.keyStorePassword     // Catch: java.lang.Throwable -> L75 java.lang.Exception -> L79
+            r1.store(r8, r0)     // Catch: java.lang.Throwable -> L75 java.lang.Exception -> L79
+            r8.close()     // Catch: java.io.IOException -> L6f
+        L6f:
+            if (r3 == 0) goto Lad
+        L71:
+            r3.close()     // Catch: java.io.IOException -> Lad
+            goto Lad
+        L75:
+            r9 = move-exception
+            r0 = r8
+            r8 = r9
+            goto Laf
+        L79:
+            r0 = move-exception
+            r6 = r0
+            r0 = r8
+            r8 = r6
+            goto L89
+        L7e:
+            r8 = move-exception
+            goto L89
+        L80:
+            r8 = move-exception
+            r9 = r0
+            goto L89
+        L83:
+            r8 = move-exception
+            r3 = r0
+            goto Laf
+        L86:
+            r8 = move-exception
+            r9 = r0
+            r3 = r9
+        L89:
+            com.worklight.common.Logger r1 = com.worklight.common.security.WLDeviceAuthManager.logger     // Catch: java.lang.Throwable -> Lae
+            java.lang.StringBuilder r2 = new java.lang.StringBuilder     // Catch: java.lang.Throwable -> Lae
+            r2.<init>()     // Catch: java.lang.Throwable -> Lae
+            java.lang.String r4 = "Device UUID could not be saved for authentication with "
+            r2.append(r4)     // Catch: java.lang.Throwable -> Lae
+            java.lang.String r4 = r8.getMessage()     // Catch: java.lang.Throwable -> Lae
+            r2.append(r4)     // Catch: java.lang.Throwable -> Lae
+            java.lang.String r2 = r2.toString()     // Catch: java.lang.Throwable -> Lae
+            r1.error(r2, r8)     // Catch: java.lang.Throwable -> Lae
+            if (r0 == 0) goto Laa
+            r0.close()     // Catch: java.io.IOException -> La9
+            goto Laa
+        La9:
+        Laa:
+            if (r3 == 0) goto Lad
+            goto L71
+        Lad:
+            return r9
+        Lae:
+            r8 = move-exception
+        Laf:
+            if (r0 == 0) goto Lb6
+            r0.close()     // Catch: java.io.IOException -> Lb5
+            goto Lb6
+        Lb5:
+        Lb6:
+            if (r3 == 0) goto Lbb
+            r3.close()     // Catch: java.io.IOException -> Lbb
+        Lbb:
+            throw r8
+            return
+        */
+        throw new UnsupportedOperationException("Method not decompiled: com.worklight.common.security.WLDeviceAuthManager.saveDeviceUUID(java.lang.String, java.lang.String):java.security.KeyStore$SecretKeyEntry");
+    }
+
+    /* JADX WARN: Code restructure failed: missing block: B:17:0x0076, code lost:
+        if (r2 == null) goto L4;
+     */
+    /* JADX WARN: Removed duplicated region for block: B:21:0x007c  */
+    /*
+        Code decompiled incorrectly, please refer to instructions dump.
+        To view partially-correct code enable 'Show inconsistent code' option in preferences
+    */
+    private java.security.KeyStore.Entry getSecretKeyEntry(java.lang.String r15) throws java.io.IOException, java.security.KeyStoreException, java.security.NoSuchAlgorithmException, java.security.cert.CertificateException, android.content.pm.PackageManager.NameNotFoundException, java.security.UnrecoverableEntryException {
+        /*
+            Method dump skipped, instructions count: 345
+            To view this dump change 'Code comments level' option to 'DEBUG'
+        */
+        throw new UnsupportedOperationException("Method not decompiled: com.worklight.common.security.WLDeviceAuthManager.getSecretKeyEntry(java.lang.String):java.security.KeyStore$Entry");
+    }
+}
+
+package com.worklight.utils;
+
+import android.content.Context;
+import com.dynatrace.android.agent.Global;
+import com.worklight.common.Logger;
+import java.io.InputStream;
+import java.io.UnsupportedEncodingException;
+import java.security.InvalidKeyException;
+import java.security.Key;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.security.spec.InvalidKeySpecException;
+import java.util.ArrayList;
+import javax.crypto.Cipher;
+import javax.crypto.CipherInputStream;
+import javax.crypto.Mac;
+import javax.crypto.spec.SecretKeySpec;
+import org.json.JSONArray;
+import org.json.JSONException;
+
+/* loaded from: classes3.dex */
+public class SecurityUtils {
+    public static final String HASH_ALGORITH_MD5 = "MD5";
+    public static final String HASH_ALGORITH_SHA1 = "SHA-1";
+    private static Logger logger = Logger.getInstance("SecurityUtils");
+
+    /* loaded from: classes3.dex */
+    public static class PBKDF2 {
+        public static Key genKey(char[] cArr, byte[] bArr, int i, int i2) throws NoSuchAlgorithmException, InvalidKeyException, InvalidKeySpecException {
+            Mac mac = Mac.getInstance("HMACSHA1");
+            int macLength = mac.getMacLength();
+            int ceil = ceil(i2, macLength);
+            int i3 = i2 - ((ceil - 1) * macLength);
+            byte[] bArr2 = new byte[i2];
+            mac.init(new SecretKeySpec(new String(cArr).getBytes(), "HmacSHA1"));
+            int i4 = 1;
+            while (i4 <= ceil) {
+                System.arraycopy(m248f(mac, bArr, i, i4), 0, bArr2, (i4 - 1) * macLength, i4 == ceil ? i3 : macLength);
+                i4++;
+            }
+            return new SecretKeySpec(bArr2, "AES");
+        }
+
+        /* renamed from: f */
+        private static byte[] m248f(Mac mac, byte[] bArr, int i, int i2) throws NoSuchAlgorithmException, InvalidKeySpecException, InvalidKeyException {
+            byte[] bArr2 = new byte[mac.getMacLength()];
+            byte[] concat = concat(bArr, encodedInt(i2));
+            for (int i3 = 1; i3 <= i; i3++) {
+                concat = mac.doFinal(concat);
+                bArr2 = xor(bArr2, concat);
+            }
+            return bArr2;
+        }
+
+        private static byte[] xor(byte[] bArr, byte[] bArr2) {
+            for (int i = 0; i < bArr.length; i++) {
+                bArr[i] = (byte) ((bArr[i] ^ bArr2[i]) & 255);
+            }
+            return bArr;
+        }
+
+        private static byte[] concat(byte[] bArr, byte[] bArr2) {
+            byte[] bArr3 = new byte[bArr.length + bArr2.length];
+            System.arraycopy(bArr, 0, bArr3, 0, bArr.length);
+            System.arraycopy(bArr2, 0, bArr3, bArr.length, bArr2.length);
+            return bArr3;
+        }
+
+        private static int ceil(int i, int i2) {
+            int i3 = i / i2;
+            return i % i2 != 0 ? i3 + 1 : i3;
+        }
+
+        private static byte[] encodedInt(int i) {
+            return new byte[]{(byte) (((-16777216) & i) >>> 24), (byte) ((16711680 & i) >>> 16), (byte) ((65280 & i) >>> 8), (byte) (i & 255)};
+        }
+    }
+
+    public static String hashData(String str, String str2) {
+        byte[] hashData = hashData(str.getBytes(), str2);
+        StringBuilder sb = new StringBuilder();
+        for (byte b : hashData) {
+            sb.append(Integer.toString((b & 255) + 256, 16).substring(1));
+        }
+        return sb.toString();
+    }
+
+    public static byte[] hashData(byte[] bArr, String str) {
+        try {
+            MessageDigest messageDigest = MessageDigest.getInstance(str);
+            messageDigest.reset();
+            messageDigest.update(bArr);
+            return messageDigest.digest();
+        } catch (NoSuchAlgorithmException e) {
+            Logger logger2 = logger;
+            logger2.error(str + " is not supported on this device", e);
+            return null;
+        }
+    }
+
+    public static InputStream decryptData(InputStream inputStream, byte[] bArr) throws Exception {
+        SecretKeySpec secretKeySpec = new SecretKeySpec(bArr, "AES");
+        Cipher cipher = Cipher.getInstance("AES");
+        cipher.init(2, secretKeySpec);
+        return new CipherInputStream(inputStream, cipher);
+    }
+
+    public static byte[] kpg(Context context, String[] strArr) {
+        try {
+            return PaidSecurityUtils.kpg(context, strArr);
+        } catch (Throwable unused) {
+            return new byte[0];
+        }
+    }
+
+    public static String hashDataFromJSON(Context context, JSONArray jSONArray) throws JSONException, UnsupportedEncodingException {
+        String str = ((String) jSONArray.get(0)).split(Global.COMMA)[0];
+        JSONArray jSONArray2 = (JSONArray) jSONArray.get(1);
+        ArrayList arrayList = new ArrayList();
+        for (int i = 0; i < jSONArray2.length(); i++) {
+            arrayList.add(jSONArray2.getString(i));
+        }
+        String replaceAll = Base64.encode(kpg(context, (String[]) arrayList.toArray(new String[0])), "UTF-8").replaceAll(Global.NEWLINE, "");
+        return hashData(str.trim() + replaceAll, "SHA-1");
+    }
+}
